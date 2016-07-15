@@ -51,6 +51,8 @@ deploy:
     secure: CV87cOfUr7KV5v4Nyd+yIciu0it3MmXkd++X9+Byd8QNMLOiim2pDMb/dpFpxE+rMyQzIDAHht6Qksm2aPrRyzEuXTh4LevK4sbmm5KJAVPTAHj6aFLFlOlLKsn+2mCGPgsYdQWzRvePSfj4cMDtMB+CCBFnmBzP1/2BcnIzmNkTulRkP8BtoDMHw5SDLgMG7pBW30Apl6gNI7yCz0DK0eCfEt+AeAcLpmAxEwesShGBdhX9SXaXyTZmTO7paz/fOEtfylFjZ6aqQhE+yM2P6qrgjHXc2O9lnzMkddsu2TFim1+Tp6GZZEDiPPDYdFx11wAWzqUuqif1DJu/G6TyTgh7yMs9fJ1Qe+FUgmekSNIoSbqxi9nax31D1wrcwjKLRtuhtkiisSjXYxS2Tm3QbmfQ0ITmysngxbYufTv/3dzkbt/6oNAzkBVlk5YJIghX+uT2ocKGB6mWNrduHTxluN6aB2JKJgE99A959atWwxLLYpCyRkYpqkG6g3x8rbpYMaK2/wAOH1pmpOL+3l0J1TUxjCBc9ANrikmxpa2zuW8WMSzwIQKx91yNXXQaPgSM7Q+kRkHSxI9Y7/XEl560OlrjH1B/VIwHoMzaKRfTaklyrudxSAAVf0TM5G2cvy9xcx4wAXjiD7UYqfC9eSj6D2YlQv8BLOqEqM8EzAwq/xQ=
   on:
     branch: master
+    condition: "$EMBER_TRY_SCENARIO = 'default'"
+    node: 'stable'
     tags: false
 after_deploy:
 - .travis/publish-gh-pages.sh
