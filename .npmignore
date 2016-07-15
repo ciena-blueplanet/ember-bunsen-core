@@ -1,3 +1,4 @@
+/.travis
 /bower_components
 /config/ember-try.js
 /dist
@@ -11,8 +12,9 @@
 .eslintrc
 .gitignore
 .jshintrc
-.watchmanconfig
+.pullapprove.yml
 .travis.yml
+.watchmanconfig
 bower.json
 ember-cli-build.js
 testem.js

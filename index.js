@@ -7,13 +7,14 @@ module.exports = {
   name: 'bunsen-core',
 
   treeForAddon (tree) {
-    const bunsenCorePath = path.dirname(require.resolve('bunsen-core/lib/index.js'))
+    const bunsenCorePath = path.dirname(require.resolve('bunsen-core/src/index.js'))
+    const bunsenCoreTree = this.treeGenerator(bunsenCorePath)
 
     if (!tree) {
-      return this._super.treeForAddon.call(this, bunsenCorePath)
+      return this._super.treeForAddon.call(this, bunsenCoreTree)
     }
 
-    const trees = mergeTrees([bunsenCorePath, tree], {
+    const trees = mergeTrees([bunsenCoreTree, tree], {
       overwrite: true
     })
 
