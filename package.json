@@ -1,7 +1,7 @@
 {
   "name": "ember-bunsen-core",
-  "version": "0.0.5",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.0",
+  "description": "Core bunsen library for Ember apps",
   "directories": {
     "doc": "doc",
     "test": "tests"
