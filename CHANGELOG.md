@@ -1,3 +1,8 @@
+# 0.0.2
+
+* **Fixed** deploy.
+
+
 # 0.0.1
 
 * Implement functionality.
