@@ -1,3 +1,8 @@
+# 0.2.0
+
+* **Upgraded** `bunsen-core` to latest version to include Redux actions and reducer.
+
+
 # 0.1.0
 
 * **Added** tests.
