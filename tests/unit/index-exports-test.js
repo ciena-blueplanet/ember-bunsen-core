@@ -1,5 +1,5 @@
 import {expect} from 'chai'
-import {it} from 'mocha'
+import {describe, it} from 'mocha'
 
 import {
   dereference,
@@ -7,14 +7,16 @@ import {
   validator
 } from 'bunsen-core'
 
-it('exports dereference', function () {
-  expect(typeof dereference).to.equal('object')
-})
+describe('bunsen-core', function () {
+  it('exports dereference', function () {
+    expect(typeof dereference).to.equal('object')
+  })
 
-it('exports utils', function () {
-  expect(typeof utils).to.equal('object')
-})
+  it('exports utils', function () {
+    expect(typeof utils).to.equal('object')
+  })
 
-it('exports validator', function () {
-  expect(typeof validator).to.equal('object')
+  it('exports validator', function () {
+    expect(typeof validator).to.equal('function')
+  })
 })
