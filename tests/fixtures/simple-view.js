@@ -1,32 +1,25 @@
 export default {
-  version: '1.0',
-  type: 'form',
-  rootContainers: [
-    {
-      label: 'Main',
-      container: 'main'
-    }
-  ],
-  containers: [
-    {
-      id: 'main',
-      rows: [
-        [
-          {
-            model: 'firstName'
-          }
-        ],
-        [
-          {
-            model: 'lastName'
-          }
-        ],
-        [
-          {
-            model: 'alias'
-          }
-        ]
+  cellDefinitions: {
+    main: {
+      children: [
+        {
+          model: 'firstName'
+        },
+        {
+          model: 'lastName'
+        },
+        {
+          model: 'alias'
+        }
       ]
     }
-  ]
+  },
+  cells: [
+    {
+      label: 'Main',
+      extends: 'main'
+    }
+  ],
+  type: 'form',
+  version: '2.0'
 }

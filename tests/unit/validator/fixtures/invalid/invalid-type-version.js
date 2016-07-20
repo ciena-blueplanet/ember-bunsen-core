@@ -1,6 +1,6 @@
 export default {
-  version: '0.1',
+  cellDefinitions: {},
+  cells: [],
   type: 'my-custom-type',
-  containers: [],
-  rootContainers: []
+  version: '0.1'
 }
