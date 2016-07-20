@@ -1,3 +1,9 @@
+# 0.3.0
+
+* **Updated** to latest `bunsen-core` which uses version 2 of the view schema.
+
+
+
 # 0.2.0
 
 * **Upgraded** `bunsen-core` to latest version to include Redux actions and reducer.
