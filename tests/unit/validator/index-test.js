@@ -9,9 +9,8 @@ import missingReqAttrs from './fixtures/invalid/missing-required-attributes'
 import invalidTypeVersion from './fixtures/invalid/invalid-type-version'
 import simpleFormConfig from './fixtures/simple-form'
 import simpleFormModel from './fixtures/simple-form-model'
-import badContainers from './fixtures/invalid/bad-containers'
-import badRootContainers from './fixtures/invalid/bad-root-containers'
-import multipleRootContainers from './fixtures/multiple-root-containers'
+import badCells from './fixtures/invalid/bad-cells'
+import multipleCells from './fixtures/multiple-cells'
 import transforms from './fixtures/transforms'
 
 describe('Unit: validator', function () {
@@ -70,17 +69,10 @@ describe('Unit: validator', function () {
         }])
       })
 
-      it('reports missing "containers"', function () {
+      it('reports missing "cells"', function () {
         expect(result.errors).to.containSubset([{
           message: 'Field is required.',
-          path: '#/containers'
-        }])
-      })
-
-      it('reports missing "rootContainers"', function () {
-        expect(result.errors).to.containSubset([{
-          message: 'Field is required.',
-          path: '#/rootContainers'
+          path: '#/cells'
         }])
       })
     })
@@ -105,8 +97,8 @@ describe('Unit: validator', function () {
       })
     })
 
-    it('does not complain when multiple root containers', function () {
-      const def = _.cloneDeep(multipleRootContainers)
+    it('does not complain when multiple root cells', function () {
+      const def = _.cloneDeep(multipleCells)
       result = validate(def, simpleFormModel)
       expect(result.errors.length).to.eql(0)
     })
@@ -117,40 +109,27 @@ describe('Unit: validator', function () {
       expect(result.errors.length).to.eql(0)
     })
 
-    describe('when rootContainers are bad', function () {
+    describe('when cells are bad', function () {
       let def
       beforeEach(function () {
-        def = _.cloneDeep(badRootContainers)
+        def = _.cloneDeep(badCells)
       })
 
       it('when missing "label"', function () {
-        def.rootContainers = [def.rootContainers[1]]
+        def.cells = [def.cells[1]]
         result = validate(def, simpleFormModel)
         expect(result.errors).to.containSubset([{
-          path: '#/rootContainers/0/label',
-          message: 'Field is required.'
+          path: '#/cells/0',
+          message: 'Missing required attribute "label"'
         }])
       })
 
-      it('when invalid "container"', function () {
-        def.rootContainers = [def.rootContainers[2]]
+      it('when invalid "extends"', function () {
+        def.cells = [def.cells[2]]
         result = validate(def, simpleFormModel)
         expect(result.errors).to.containSubset([{
-          path: '#/rootContainers/0',
-          message: 'Invalid value "baz" for "container" Valid options are ["foo","bar"]'
-        }])
-      })
-    })
-
-    describe('when container is bad', function () {
-      beforeEach(function () {
-        result = validate(badContainers, simpleFormModel)
-      })
-
-      it('gives error message for missing "rows"', function () {
-        expect(result.errors).to.containSubset([{
-          path: '#/containers/1/rows',
-          message: 'Field is required.'
+          path: '#/cells/0',
+          message: 'Invalid value "baz" for "extends" Valid options are ["bar","foo"]'
         }])
       })
     })
