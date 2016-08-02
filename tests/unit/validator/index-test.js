@@ -115,15 +115,6 @@ describe('Unit: validator', function () {
         def = _.cloneDeep(badCells)
       })
 
-      it('when missing "label"', function () {
-        def.cells = [def.cells[1]]
-        result = validate(def, simpleFormModel)
-        expect(result.errors).to.containSubset([{
-          path: '#/cells/0',
-          message: 'Missing required attribute "label"'
-        }])
-      })
-
       it('when invalid "extends"', function () {
         def.cells = [def.cells[2]]
         result = validate(def, simpleFormModel)
