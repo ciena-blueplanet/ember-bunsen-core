@@ -1,3 +1,9 @@
+# 0.4.0
+
+* Updated to latest versions of dependencies.
+
+
+
 # 0.3.0
 
 * **Updated** to latest `bunsen-core` which uses version 2 of the view schema.
