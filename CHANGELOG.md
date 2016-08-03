@@ -1,3 +1,9 @@
+# 0.6.0
+
+* **Upgrade** to latest dependencies which includes addition of `seamless-immutable`.
+
+
+
 # 0.5.2
 No CHANGELOG section found in Pull Request description.
 Use a `# CHANGELOG` section in your Pull Request description to auto-populate the `CHANGELOG.md`
