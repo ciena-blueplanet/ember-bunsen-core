@@ -1,7 +1,7 @@
 module.exports = {
   afterInstall: function () {
     return this.addPackagesToProject([
-      {name: 'bunsen-core', target: '>=0.9.0 <= 2.0.0'}
+      {name: 'bunsen-core', target: '>=0.9.1 <= 2.0.0'}
     ])
       .then(() => {
         return this.addAddonsToProject({
