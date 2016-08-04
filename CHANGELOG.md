@@ -1,3 +1,9 @@
+# 0.6.1
+
+* **Upgraded** to latest `bunsen-core` which fixes a bug with cells that define `children` but not `model` or `extends`.
+
+
+
 # 0.6.0
 
 * **Upgrade** to latest dependencies which includes addition of `seamless-immutable`.
