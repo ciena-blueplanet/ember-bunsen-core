@@ -139,7 +139,7 @@ describe('Unit: validator/cell', () => {
             },
             {
               path: '#/cellDefinitions/main/children/2',
-              message: '"children", "extends" or "model" must be defined for each cell.'
+              message: '"children", "extends", or "model" must be defined for each cell.'
             },
             {
               path: '#/cellDefinitions/main/children/3/model',
