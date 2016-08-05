@@ -1,3 +1,7 @@
+# 0.6.2
+No CHANGELOG section found in Pull Request description.
+Use a `# CHANGELOG` section in your Pull Request description to auto-populate the `CHANGELOG.md`
+
 # 0.6.1
 
 * **Upgraded** to latest `bunsen-core` which fixes a bug with cells that define `children` but not `model` or `extends`.
