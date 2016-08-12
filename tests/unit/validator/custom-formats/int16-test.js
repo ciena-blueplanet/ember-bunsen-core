@@ -2,52 +2,52 @@ import {expect} from 'chai'
 import {describe, it} from 'mocha'
 import int16 from 'bunsen-core/validator/custom-formats/int16'
 
-describe('Unit: validator/custom-formats/int16', () => {
-  it('returns false when value is undefined', () => {
+describe('Unit: validator/custom-formats/int16', function () {
+  it('returns false when value is undefined', function () {
     expect(int16(undefined)).to.be.false
   })
 
-  it('returns false when value is null', () => {
+  it('returns false when value is null', function () {
     expect(int16(null)).to.be.false
   })
 
-  it('returns false when value is a non-numeric string', () => {
+  it('returns false when value is a non-numeric string', function () {
     expect(int16('test')).to.be.false
   })
 
-  it('returns false when value is an object', () => {
+  it('returns false when value is an object', function () {
     expect(int16({})).to.be.false
   })
 
-  it('returns false when value is an array', () => {
+  it('returns false when value is an array', function () {
     expect(int16([])).to.be.false
   })
 
-  it('returns false when value is a float', () => {
+  it('returns false when value is a float', function () {
     expect(int16(0.5)).to.be.false
   })
 
-  it('returns false when value is NaN', () => {
+  it('returns false when value is NaN', function () {
     expect(int16(NaN)).to.be.false
   })
 
-  it('returns false when value is Infinity', () => {
+  it('returns false when value is Infinity', function () {
     expect(int16(Infinity)).to.be.false
   })
 
-  it('returns false when value < -32768', () => {
+  it('returns false when value < -32768', function () {
     expect(int16(-32769)).to.be.false
     expect(int16('-32769')).to.be.false
   })
 
-  it('returns true when -32768 <= value <= 32767', () => {
+  it('returns true when -32768 <= value <= 32767', function () {
     expect(int16(-32768)).to.be.true
     expect(int16('-32768')).to.be.true
     expect(int16(32767)).to.be.true
     expect(int16('32767')).to.be.true
   })
 
-  it('returns false when value > 32767', () => {
+  it('returns false when value > 32767', function () {
     expect(int16(32768)).to.be.false
     expect(int16('32768')).to.be.false
   })
