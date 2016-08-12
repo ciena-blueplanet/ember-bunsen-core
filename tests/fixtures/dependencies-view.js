@@ -54,7 +54,6 @@ export default {
   },
   cells: [
     {
-      label: 'Main',
       extends: 'main'
     }
   ],
