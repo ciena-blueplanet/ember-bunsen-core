@@ -41,7 +41,7 @@
     "ember-lodash-shim": "0.1.12",
     "ember-resolver": "^2.0.3",
     "ember-seamless-immutable-shim": "0.2.8",
-    "ember-validator-shim": "0.2.7",
+    "ember-validator-shim": "0.2.10",
     "ember-z-schema": "0.2.20",
     "eslint": "^3.1.0",
     "eslint-config-frost-standard": "^3.0.0",
