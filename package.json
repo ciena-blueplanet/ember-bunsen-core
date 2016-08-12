@@ -38,7 +38,7 @@
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
-    "ember-lodash-shim": "0.1.12",
+    "ember-lodash-shim": "0.1.16",
     "ember-resolver": "^2.0.3",
     "ember-seamless-immutable-shim": "0.2.8",
     "ember-validator-shim": "0.2.7",
