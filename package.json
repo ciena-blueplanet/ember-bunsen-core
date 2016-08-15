@@ -40,7 +40,7 @@
     "ember-load-initializers": "^0.5.1",
     "ember-lodash-shim": "0.1.14",
     "ember-resolver": "^2.0.3",
-    "ember-seamless-immutable-shim": "0.2.11",
+    "ember-seamless-immutable-shim": "0.2.12",
     "ember-validator-shim": "0.2.10",
     "ember-z-schema": "0.2.28",
     "eslint": "^3.1.0",
