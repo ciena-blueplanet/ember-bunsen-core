@@ -1,6 +1,6 @@
 {
   "name": "ember-bunsen-core",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "description": "Core bunsen library for Ember apps",
   "directories": {
     "doc": "doc",
