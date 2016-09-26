@@ -1,3 +1,9 @@
+# 0.8.1
+
+* **Upgraded** `bunsen-core` to latest version to address a few bugs.
+
+
+
 # 0.8.0
 
 * **Added** missing dependency.
