@@ -3,8 +3,7 @@
  */
 
 import _ from 'lodash'
-import chai from 'chai'
-const expect = chai.expect
+import {expect} from 'chai'
 import {beforeEach, describe, it} from 'mocha'
 import evaluate from 'bunsen-core/evaluate-conditions'
 
