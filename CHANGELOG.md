@@ -1,3 +1,9 @@
+# 0.8.2
+
+* **Fixed** bug where `label` was being dropped from `rootContainer` from v1 view being converted to v2.
+
+
+
 # 0.8.1
 
 * **Upgraded** `bunsen-core` to latest version to address a few bugs.
