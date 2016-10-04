@@ -1,3 +1,9 @@
+# 0.8.3
+
+* **Upgrade** to latest `bunsen-core` which adds new `clearable` option for cells.
+
+
+
 # 0.8.2
 
 * **Fixed** bug where `label` was being dropped from `rootContainer` from v1 view being converted to v2.
