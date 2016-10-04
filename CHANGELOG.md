@@ -1,3 +1,9 @@
+# 0.9.0
+
+* Upgrading to `bunsen-core`@0.13.0 which eliminates some unnecessary deep cloning and adds change sets.
+
+
+
 # 0.8.3
 
 * **Upgrade** to latest `bunsen-core` which adds new `clearable` option for cells.
