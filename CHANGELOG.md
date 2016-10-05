@@ -1,3 +1,8 @@
+# 0.9.1
+
+* Fixes `properties: undefined` bug in `evaluate`
+
+
 # 0.9.0
 
 * Upgrading to `bunsen-core`@0.13.0 which eliminates some unnecessary deep cloning and adds change sets.
