@@ -5,6 +5,7 @@
 import _ from 'lodash'
 import {expect} from 'chai'
 import {beforeEach, describe, it} from 'mocha'
+import {dereference} from 'bunsen-core/dereference'
 import evaluate from 'bunsen-core/evaluate-conditions'
 
 import simpleModel from '../fixtures/conditions/simple-model'
@@ -13,20 +14,33 @@ import modelWithRelativePaths from '../fixtures/conditions/relative-paths-model'
 import modelWithArray from '../fixtures/conditions/array-model'
 import modelWithDefinitions from '../fixtures/conditions/definitions-model'
 
-describe('evaluate-schema', () => {
-  let model, value, newModel, expected
+/**
+ * Used to deference the
+ * @param {Object} model - model to evaluate
+ * @param {Object} value - value
+ * @returns {Object} the evaluated model
+ */
+function dereferenceAndEval (model, value) {
+  var schema = dereference(model).schema
+  delete schema.definitions
+
+  return evaluate(schema, value)
+}
+
+describe('evaluate-conditions', () => {
+  var model, newModel, value, expected
 
   // FIXME: in the next major release, we want this to behave differently, the 'if' condition should not invert
   // in functionality when 'set: true' is present, that should just be an initial state that can be overwridden in
   // the 'then' block
   it('hides a conditional property when it is showing by default and one of its conditions is met', () => {
-    const data = {
+    var data = {
       tagType: 'single-tagged'
     }
 
     model = _.cloneDeep(simpleModel)
     model.properties.tag.set = true
-    const newModel = evaluate(model, data)
+    var newModel = dereferenceAndEval(model, data)
     expect(newModel).to.eql({
       'type': 'object',
       'properties': {
@@ -36,6 +50,14 @@ describe('evaluate-schema', () => {
         }
       }
     })
+  })
+
+  it('does not add additional undefined properties', function () {
+    model = {
+      type: 'object'
+    }
+    var newModel = dereferenceAndEval(model, {})
+    expect('properties' in newModel).to.equal(false)
   })
 
   describe('when nothing passed in', () => {
@@ -57,7 +79,7 @@ describe('evaluate-schema', () => {
     describe('when no value given', () => {
       beforeEach(() => {
         value = {}
-        newModel = evaluate(model, value)
+        newModel = dereferenceAndEval(model, value)
       })
 
       it('trims the tags', () => {
@@ -73,7 +95,7 @@ describe('evaluate-schema', () => {
         value = {
           tagType: 'single-tagged'
         }
-        newModel = evaluate(model, value)
+        newModel = dereferenceAndEval(model, value)
       })
 
       it('strips out the second tag', () => {
@@ -88,7 +110,7 @@ describe('evaluate-schema', () => {
         value = {
           tagType: 'double-tagged'
         }
-        newModel = evaluate(model, value)
+        newModel = dereferenceAndEval(model, value)
       })
 
       it('includes all three properties', () => {
@@ -104,7 +126,7 @@ describe('evaluate-schema', () => {
         value = {
           tagType: 'foo-tagged'
         }
-        newModel = evaluate(model, value)
+        newModel = dereferenceAndEval(model, value)
       })
 
       it('includes a modified tag property', () => {
@@ -124,7 +146,7 @@ describe('evaluate-schema', () => {
       beforeEach(() => {
         model.properties.tag.set = true
         value = {}
-        newModel = evaluate(model, value)
+        newModel = dereferenceAndEval(model, value)
       })
 
       it('includes the defaulted property', () => {
@@ -149,7 +171,7 @@ describe('evaluate-schema', () => {
             tagType: 'single-tagged'
           }
         }
-        newModel = evaluate(model, value)
+        newModel = dereferenceAndEval(model, value)
       })
 
       it('trims out tag2', () => {
@@ -172,7 +194,7 @@ describe('evaluate-schema', () => {
           tagType: 'single-tagged'
         }
 
-        newModel = evaluate(model, value)
+        newModel = dereferenceAndEval(model, value)
       })
 
       it('shows just the first tag', () => {
@@ -194,7 +216,7 @@ describe('evaluate-schema', () => {
         value = {
           tagType: 'single-tagged'
         }
-        newModel = evaluate(model, value)
+        newModel = dereferenceAndEval(model, value)
       })
 
       it('includes only the first tag', () => {
@@ -222,10 +244,10 @@ describe('evaluate-schema', () => {
             {tagType: 'double-tagged'}
           ]
         }
-        newModel = evaluate(model, value)
+        newModel = dereferenceAndEval(model, value)
       })
 
-      it('evalutates to anyOf the possible items', () => {
+      it('evaluates to anyOf the possible items', () => {
         expect(newModel).to.eql({
           type: 'object',
           properties: {

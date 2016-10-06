@@ -126,6 +126,7 @@ describe('Unit: reducer', function () {
 
       expect(changedState).to.eql({
         errors: [],
+        lastAction: 'VALIDATION_RESOLVED',
         validationResult: ['you look kinda fat'],
         value: {},
         baseModel: {}
