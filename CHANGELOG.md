@@ -1,3 +1,9 @@
+# 0.9.2
+
+* **Upgraded** to latest version of `bunsen-core`.
+
+
+
 # 0.9.1
 
 * Fixes `properties: undefined` bug in `evaluate`
