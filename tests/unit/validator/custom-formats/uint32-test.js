@@ -2,7 +2,7 @@ import {expect} from 'chai'
 import {describe, it} from 'mocha'
 import uint32 from 'bunsen-core/validator/custom-formats/uint32'
 
-describe('Unit: validator/custom-formats/unit32', function () {
+describe('Unit: validator/custom-formats/uint32', function () {
   it('returns false when value is undefined', function () {
     expect(uint32(undefined)).to.be.false
   })
