@@ -1,3 +1,8 @@
+# 0.9.3
+
+* **Fixed** issue with nested cells.
+
+
 # 0.9.2
 
 * **Upgraded** to latest version of `bunsen-core`.
