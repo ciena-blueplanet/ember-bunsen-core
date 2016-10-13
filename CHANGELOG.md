@@ -1,3 +1,9 @@
+# 0.10.1
+
+* **Fixed** utility methods not to be less brittle and not throw an error when query isn't present.
+
+
+
 # 0.10.0
 
 * **Upgraded** to latest `bunsen-core` to get new MAC address custom formats and `modelType` validation for select renderers.
