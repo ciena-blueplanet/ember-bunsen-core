@@ -148,7 +148,7 @@ describe('Unit: validator', function () {
       }
     ]
       .forEach((view) => {
-        describe('when valid', () => {
+        describe('when valid', function () {
           var result
 
           beforeEach(() => {
@@ -170,7 +170,7 @@ describe('Unit: validator', function () {
             result = validate(view, model, renderers, validateRenderer)
           })
 
-          it('returns proper result', () => {
+          it('returns proper result', function () {
             expect(result).deep.equal({
               errors: [],
               warnings: []
@@ -179,7 +179,7 @@ describe('Unit: validator', function () {
         })
       })
 
-    describe('when valid', () => {
+    describe('when valid', function () {
       var result
 
       beforeEach(() => {
@@ -238,7 +238,7 @@ describe('Unit: validator', function () {
         result = validate(view, model, renderers, validateRenderer)
       })
 
-      it('returns proper result', () => {
+      it('returns proper result', function () {
         expect(result).deep.equal({
           errors: [],
           warnings: []
@@ -318,6 +318,120 @@ describe('Unit: validator', function () {
           path: '#/cells/0',
           message: 'Invalid value "baz" for "extends" Valid options are ["bar","foo"]'
         }])
+      })
+    })
+
+    describe('when modelType is invalid on root cell', function () {
+      var result
+
+      beforeEach(function () {
+        const model = {
+          properties: {
+            foo: {
+              type: 'string'
+            }
+          },
+          type: 'object'
+        }
+
+        const view = {
+          cells: [
+            {
+              model: 'foo',
+              renderer: {
+                name: 'select',
+                options: {
+                  modelType: 'bar'
+                }
+              }
+            }
+          ],
+          type: 'form',
+          version: '2.0'
+        }
+
+        const renderers = []
+
+        function validateRenderer (rendererName) {
+          return true
+        }
+
+        function validateModelType () {
+          return false
+        }
+
+        result = validate(view, model, renderers, validateRenderer, validateModelType)
+      })
+
+      it('returns proper result', function () {
+        expect(result).deep.equal({
+          errors: [
+            {
+              message: 'Invalid modelType reference "bar"',
+              path: '#/cells/0/renderer/options'
+            }
+          ],
+          warnings: []
+        })
+      })
+    })
+
+    describe('when modelType is invalid on root cell child', function () {
+      var result
+
+      beforeEach(function () {
+        const model = {
+          properties: {
+            foo: {
+              type: 'string'
+            }
+          },
+          type: 'object'
+        }
+
+        const view = {
+          cells: [
+            {
+              children: [
+                {
+                  model: 'foo',
+                  renderer: {
+                    name: 'select',
+                    options: {
+                      modelType: 'bar'
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          type: 'form',
+          version: '2.0'
+        }
+
+        const renderers = []
+
+        function validateRenderer (rendererName) {
+          return true
+        }
+
+        function validateModelType () {
+          return false
+        }
+
+        result = validate(view, model, renderers, validateRenderer, validateModelType)
+      })
+
+      it('returns proper result', function () {
+        expect(result).deep.equal({
+          errors: [
+            {
+              message: 'Invalid modelType reference "bar"',
+              path: '#/cells/0/children/0/renderer/options'
+            }
+          ],
+          warnings: []
+        })
       })
     })
   })
