@@ -1,3 +1,9 @@
+# 0.10.0
+
+* **Upgraded** to latest `bunsen-core` to get new MAC address custom formats and `modelType` validation for select renderers.
+
+
+
 # 0.9.3
 
 * **Fixed** issue with nested cells.
