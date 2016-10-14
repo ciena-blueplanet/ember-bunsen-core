@@ -112,5 +112,11 @@ describe('utils', function () {
         utils.populateQuery({}, undefined)
       }).not.to.throw()
     })
+
+    it('does not throw error when query dependency is not present', function () {
+      expect(function () {
+        utils.populateQuery({}, {node: '${./node}'})
+      }).not.to.throw()
+    })
   })
 })
