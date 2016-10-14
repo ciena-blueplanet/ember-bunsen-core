@@ -1,3 +1,9 @@
+# 0.10.2
+
+* **Fixed** `populateQuery()` to not throw error.
+
+
+
 # 0.10.1
 
 * **Fixed** utility methods not to be less brittle and not throw an error when query isn't present.
