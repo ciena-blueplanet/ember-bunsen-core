@@ -1,3 +1,8 @@
+# 0.10.4
+
+* Updating to version of `bunsen-core` that will allow more types in the select data options.
+
+
 # 0.10.3
 
 * **Fixed** issue around `hasValidQuery` returning true even when query was invalid.
