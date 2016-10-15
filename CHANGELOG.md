@@ -1,3 +1,9 @@
+# 0.10.3
+
+* **Fixed** issue around `hasValidQuery` returning true even when query was invalid.
+
+
+
 # 0.10.2
 
 * **Fixed** `populateQuery()` to not throw error.
