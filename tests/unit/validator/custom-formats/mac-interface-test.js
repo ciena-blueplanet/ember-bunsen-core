@@ -70,12 +70,12 @@ describe('validator/custom-formats/mac-prefix', function () {
     expect(macInterface('00:00:00:00:00:1ff/0')).to.be.equal(false)
   })
 
-  it('returns false when invalid MAC prefix', () => {
+  it('returns false when invalid MAC prefix', function () {
     expect(macInterface('ff:ff:00:00:00:00/16')).to.be.equal(false)
     expect(macInterface('f0:ff:00:00:00:00/multicast')).to.be.equal(false)
   })
 
-  it('returns true when valid MAC prefix', () => {
+  it('returns true when valid MAC prefix', function () {
     expect(macInterface('ff:ff:ff:00:00:00/16')).to.be.equal(true)
     expect(macInterface('ff:ff:ff:00:00:01/24')).to.be.equal(true)
     expect(macInterface('ff:ff:ff:00:00:01/multicast')).to.be.equal(true)
