@@ -1,3 +1,9 @@
+# 0.10.5
+
+* **Upgraded** `bunsen-core` to latest.
+
+
+
 # 0.10.4
 
 * Updating to version of `bunsen-core` that will allow more types in the select data options.
