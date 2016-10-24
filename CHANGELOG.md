@@ -1,3 +1,8 @@
+# 0.10.7
+
+* **Fixed** validation bug where cell's `model` wasn't being applied to it's children.
+
+
 # 0.10.6
 
 * **Upgraded** `bunsen-core` to latest.
