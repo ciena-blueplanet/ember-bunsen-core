@@ -1,3 +1,8 @@
+# 0.10.8
+
+* **Fixed** `parseVariables()` to return correct data type.
+
+
 # 0.10.7
 
 * **Fixed** validation bug where cell's `model` wasn't being applied to it's children.
