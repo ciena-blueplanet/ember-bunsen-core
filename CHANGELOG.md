@@ -1,3 +1,9 @@
+# 0.11.0
+
+* **Upgraded** `bunsen-core` to latest version for better validation and new `hideLabel` cell option.
+
+
+
 # 0.10.8
 
 * **Fixed** `parseVariables()` to return correct data type.
