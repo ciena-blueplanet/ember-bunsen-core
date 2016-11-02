@@ -1,3 +1,8 @@
+# 0.12.0
+
+* **Added** new `forceValidation` argument to `validate` action to allow consumer to force re-validation when the value is the same.
+
+
 # 0.11.0
 
 * **Upgraded** `bunsen-core` to latest version for better validation and new `hideLabel` cell option.
