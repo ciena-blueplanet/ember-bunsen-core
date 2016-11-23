@@ -1,3 +1,8 @@
+# 0.12.1
+
+* **Updated** `bunsen-core` which brings in `computePatch`
+
+
 # 0.12.0
 
 * **Added** new `forceValidation` argument to `validate` action to allow consumer to force re-validation when the value is the same.
