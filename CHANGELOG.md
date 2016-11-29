@@ -1,3 +1,8 @@
+# 0.12.2
+
+* **Updated** `bunsen-core`.
+
+
 # 0.12.1
 
 * **Updated** `bunsen-core` which brings in `computePatch`
