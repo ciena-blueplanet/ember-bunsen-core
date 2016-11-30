@@ -85,7 +85,7 @@ describe('change-utils', function () {
   })
 
   describe('computePatch', function () {
-    describe('computes the right values for removed values', function () {
+    describe('computes the right values for modified values', function () {
       it('when a leaf node is set to undefined', function () {
         const result = computePatch({
           foo: 'bar'
@@ -124,9 +124,7 @@ describe('change-utils', function () {
           foo: {}
         })
       })
-    })
 
-    describe('computes the right values for modified values', function () {
       it('when a leaf node is updated', function () {
         const result = computePatch({
           foo: 'bar'
@@ -151,6 +149,50 @@ describe('change-utils', function () {
           foo: 'bar'
         })
       })
+
+      it('when an array item is modified', function () {
+        const result = computePatch({
+          foo: ['bar', 'baz']
+        }, {
+          foo: ['bar', 'qux']
+        })
+
+        expect(result).to.eql({
+          foo: ['bar', 'qux']
+        })
+      })
+
+      it('when a deeply nested array item is modified', function () {
+        const result = computePatch({
+          lorem: {
+            fooParent: [{
+              foo: ['bar', 'baz']
+            }, {
+              foo: ['bar', 'baz']
+            }]
+          },
+          ipsum: 'dolor'
+        }, {
+          lorem: {
+            fooParent: [{
+              foo: ['bar', 'baz']
+            }, {
+              foo: ['bar', 'qux']
+            }]
+          },
+          ipsum: 'dolor'
+        })
+
+        expect(result).to.eql({
+          lorem: {
+            fooParent: [{
+              foo: ['bar', 'baz']
+            }, {
+              foo: ['bar', 'qux']
+            }]
+          }
+        })
+      })
     })
 
     describe('computes the right values for unmodified values', function () {
@@ -160,6 +202,16 @@ describe('change-utils', function () {
         }, {
           foo: 'bar'
         })
+        expect(result).to.eql({})
+      })
+
+      it('when an array is unmodified', function () {
+        const result = computePatch({
+          foo: ['bar', 'baz']
+        }, {
+          foo: ['bar', 'baz']
+        })
+
         expect(result).to.eql({})
       })
     })
@@ -192,6 +244,50 @@ describe('change-utils', function () {
         expect(result).to.eql({
           foo: {
             baz: 'qux'
+          }
+        })
+      })
+
+      it('when an array item is added to', function () {
+        const result = computePatch({
+          foo: ['bar', 'baz']
+        }, {
+          foo: ['bar', 'baz', 'qux']
+        })
+
+        expect(result).to.eql({
+          foo: ['bar', 'baz', 'qux']
+        })
+      })
+
+      it('when a nested array item is modified', function () {
+        const result = computePatch({
+          lorem: {
+            fooParent: [{
+              foo: ['bar', 'baz']
+            }, {
+              foo: ['bar', 'baz']
+            }]
+          },
+          ipsum: 'dolor'
+        }, {
+          lorem: {
+            fooParent: [{
+              foo: ['bar', 'baz']
+            }, {
+              foo: ['bar', 'baz', 'qux']
+            }]
+          },
+          ipsum: 'dolor'
+        })
+
+        expect(result).to.eql({
+          lorem: {
+            fooParent: [{
+              foo: ['bar', 'baz']
+            }, {
+              foo: ['bar', 'baz', 'qux']
+            }]
           }
         })
       })
