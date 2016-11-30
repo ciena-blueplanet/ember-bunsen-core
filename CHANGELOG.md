@@ -1,3 +1,9 @@
+# 0.12.3
+
+* Updates `bunsen-core`
+
+
+
 # 0.12.2
 
 * **Updated** `bunsen-core`.
