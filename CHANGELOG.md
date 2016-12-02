@@ -1,3 +1,9 @@
+# 0.13.1
+
+* **Upgraded** to latest `bunsen-core` which fixes `ipv6-interface` format.
+
+
+
 # 0.13.0
 
 * **Added** new formats: `ipv6-interface`, `ipv6-multicast`, and `ipv6-prefix`.
