@@ -1,7 +1,7 @@
 module.exports = {
   afterInstall: function () {
     return this.addPackagesToProject([
-      {name: 'bunsen-core', target: '0.19.2'}
+      {name: 'bunsen-core', target: '0.20.0'}
     ])
       .then(() => {
         return this.addAddonsToProject({
@@ -9,7 +9,7 @@ module.exports = {
             {name: 'ember-cli-moment-shim', target: '^2.0.0'},
             {name: 'ember-lodash-shim', target: '^1.0.0'},
             {name: 'ember-seamless-immutable-shim', target: '^1.0.0'},
-            {name: 'ember-z-schema', target: '^1.0.0'}
+            {name: 'ember-z-schema', target: '^2.0.0'}
           ]
         })
       })
