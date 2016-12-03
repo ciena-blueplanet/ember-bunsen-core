@@ -1,3 +1,9 @@
+# 0.14.0
+
+* **Upgraded** to latest `ember-z-schema`/`z-schema` and `ember-validator-shim`/`validator`.
+
+
+
 # 0.13.1
 
 * **Upgraded** to latest `bunsen-core` which fixes `ipv6-interface` format.
