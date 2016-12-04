@@ -1,3 +1,8 @@
+# 0.15.0
+
+* **Upgraded** `bunsen-core` to latest version.
+
+
 # 0.14.0
 
 * **Upgraded** to latest `ember-z-schema`/`z-schema` and `ember-validator-shim`/`validator`.
