@@ -1,3 +1,8 @@
+# 0.15.2
+
+* **Updated** `bunsen-core` to latest version.
+
+
 # 0.15.1
 
 * **Updated** `bunsen-core` to latest version.
