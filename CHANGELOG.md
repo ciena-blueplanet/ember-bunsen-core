@@ -1,3 +1,10 @@
+# 0.16.0
+
+* **Added** additional builds to CI to make sure addon works with latest versions of Ember.
+* **Removed** files from npm package that aren't necessary (all of the various config files).
+* **Updated** dependencies to latest versions.
+
+
 # 0.15.2
 
 * **Updated** `bunsen-core` to latest version.
