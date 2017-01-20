@@ -1,6 +1,6 @@
+import macInterface from 'bunsen-core/validator/custom-formats/mac-interface'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import macInterface from 'bunsen-core/validator/custom-formats/mac-interface'
 
 describe('validator/custom-formats/mac-prefix', function () {
   it('returns false when value is undefined', function () {

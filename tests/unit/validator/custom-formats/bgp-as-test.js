@@ -1,6 +1,6 @@
+import bgpAs from 'bunsen-core/validator/custom-formats/bgp-as'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import bgpAs from 'bunsen-core/validator/custom-formats/bgp-as'
 
 describe('Unit: validator/custom-formats/bgp-as', function () {
   it('returns false when value is undefined', function () {

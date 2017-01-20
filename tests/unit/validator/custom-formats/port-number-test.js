@@ -1,6 +1,6 @@
+import portNumber from 'bunsen-core/validator/custom-formats/port-number'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import portNumber from 'bunsen-core/validator/custom-formats/port-number'
 
 describe('Unit: validator/custom-formats/port-number', function () {
   it('returns false when value is undefined', function () {

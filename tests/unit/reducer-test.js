@@ -1,7 +1,7 @@
+import {CHANGE_VALUE, VALIDATION_RESOLVED} from 'bunsen-core/actions'
+import reducer from 'bunsen-core/reducer'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import reducer from 'bunsen-core/reducer'
-import {CHANGE_VALUE, VALIDATION_RESOLVED} from 'bunsen-core/actions'
 
 describe('Unit: reducer', function () {
   describe('initial state', function () {

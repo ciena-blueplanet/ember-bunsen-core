@@ -1,6 +1,6 @@
+import url from 'bunsen-core/validator/custom-formats/url'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import url from 'bunsen-core/validator/custom-formats/url'
 
 describe('Unit: validator/custom-formats/hex-string', function () {
   it('returns false when value is undefined', function () {

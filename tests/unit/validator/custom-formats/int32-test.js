@@ -1,6 +1,6 @@
+import int32 from 'bunsen-core/validator/custom-formats/int32'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import int32 from 'bunsen-core/validator/custom-formats/int32'
 
 describe('Unit: validator/custom-formats/int', function () {
   it('returns false when value is undefined', function () {

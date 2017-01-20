@@ -1,7 +1,7 @@
+import {computePatch, getChangeSet, traverseObjectLeaf} from 'bunsen-core/change-utils'
 import {expect} from 'chai'
-import {describe, beforeEach, afterEach, it} from 'mocha'
+import {afterEach, beforeEach, describe, it} from 'mocha'
 import sinon from 'sinon'
-import {traverseObjectLeaf, getChangeSet, computePatch} from 'bunsen-core/change-utils'
 
 describe('change-utils', function () {
   var sandbox

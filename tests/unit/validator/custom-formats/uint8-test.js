@@ -1,6 +1,6 @@
+import uint8 from 'bunsen-core/validator/custom-formats/uint8'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import uint8 from 'bunsen-core/validator/custom-formats/uint8'
 
 describe('Unit: validator/custom-formats/uint8', function () {
   it('returns false when value is undefined', function () {

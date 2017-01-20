@@ -1,6 +1,6 @@
+import utils from 'bunsen-core/utils'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import utils from 'bunsen-core/utils'
 
 describe('utils', function () {
   describe('.getModelPath()', function () {
