@@ -1,6 +1,6 @@
+import hexString from 'bunsen-core/validator/custom-formats/hex-string'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import hexString from 'bunsen-core/validator/custom-formats/hex-string'
 
 describe('Unit: validator/custom-formats/hex-string', function () {
   it('returns false when value is undefined', function () {

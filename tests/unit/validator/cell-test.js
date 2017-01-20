@@ -1,6 +1,6 @@
+import validatorFactory from 'bunsen-core/validator/cell'
 import {expect} from 'chai'
 import {beforeEach, describe, it} from 'mocha'
-import validatorFactory from 'bunsen-core/validator/cell'
 
 describe('Unit: validator/cell', () => {
   let validator, cell, result, cellDefinitions, model, renderers

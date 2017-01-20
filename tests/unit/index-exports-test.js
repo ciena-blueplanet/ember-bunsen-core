@@ -1,6 +1,3 @@
-import {expect} from 'chai'
-import {describe, it} from 'mocha'
-
 import {
   actions,
   changeUtils,
@@ -13,6 +10,9 @@ import {
   validateView,
   viewV1ToV2
 } from 'bunsen-core'
+import {expect} from 'chai'
+
+import {describe, it} from 'mocha'
 
 describe('bunsen-core', function () {
   it('exports dereference', function () {

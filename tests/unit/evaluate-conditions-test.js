@@ -2,17 +2,17 @@
  * Unit tests for the evaluate-schema module
  */
 
-import _ from 'lodash'
-import {expect} from 'chai'
-import {beforeEach, describe, it} from 'mocha'
 import {dereference} from 'bunsen-core/dereference'
 import evaluate from 'bunsen-core/evaluate-conditions'
+import {expect} from 'chai'
+import _ from 'lodash'
+import {beforeEach, describe, it} from 'mocha'
 
-import simpleModel from '../fixtures/conditions/simple-model'
-import modelWithDeepConditionals from '../fixtures/conditions/deep-model'
-import modelWithRelativePaths from '../fixtures/conditions/relative-paths-model'
 import modelWithArray from '../fixtures/conditions/array-model'
+import modelWithDeepConditionals from '../fixtures/conditions/deep-model'
 import modelWithDefinitions from '../fixtures/conditions/definitions-model'
+import modelWithRelativePaths from '../fixtures/conditions/relative-paths-model'
+import simpleModel from '../fixtures/conditions/simple-model'
 
 /**
  * Used to deference the

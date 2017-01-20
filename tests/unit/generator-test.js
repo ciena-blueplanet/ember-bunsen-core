@@ -1,19 +1,19 @@
+import {generateView} from 'bunsen-core/generator'
 import {expect} from 'chai'
 import {beforeEach, describe, it} from 'mocha'
-import {getDefaultView} from 'bunsen-core/generator'
 
-import simpleModel from '../fixtures/simple-model'
-import simpleView from '../fixtures/simple-view'
 import arrayModel from '../fixtures/array-model'
 import arrayView from '../fixtures/array-view'
 import dependenciesModel from '../fixtures/dependencies-model'
 import dependenciesView from '../fixtures/dependencies-view'
+import simpleModel from '../fixtures/simple-model'
+import simpleView from '../fixtures/simple-view'
 
-describe('getDefaultView()', () => {
+describe('generateView()', () => {
   let result
   describe('simple schema', () => {
     beforeEach(() => {
-      result = getDefaultView(simpleModel)
+      result = generateView(simpleModel)
     })
 
     it('creates proper simple layout', () => {
@@ -23,7 +23,7 @@ describe('getDefaultView()', () => {
 
   describe('array schema', () => {
     beforeEach(() => {
-      result = getDefaultView(arrayModel)
+      result = generateView(arrayModel)
     })
 
     it('creates proper array layout', () => {
@@ -33,7 +33,7 @@ describe('getDefaultView()', () => {
 
   describe('dependencies schema', () => {
     beforeEach(() => {
-      result = getDefaultView(dependenciesModel)
+      result = generateView(dependenciesModel)
     })
 
     it('creates proper dependencies layout', () => {

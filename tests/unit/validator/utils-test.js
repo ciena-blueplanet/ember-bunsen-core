@@ -1,6 +1,6 @@
+import {aggregateResults, validateRequiredAttribute} from 'bunsen-core/validator/utils'
 import {expect} from 'chai'
 import {beforeEach, describe, it} from 'mocha'
-import {aggregateResults, validateRequiredAttribute} from 'bunsen-core/validator/utils'
 
 describe('Unit: validator/utils', function () {
   describe('validateRequiredAttribute()', function () {

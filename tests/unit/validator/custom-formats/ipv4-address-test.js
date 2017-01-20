@@ -1,6 +1,6 @@
+import ipv4Address from 'bunsen-core/validator/custom-formats/ipv4-address'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import ipv4Address from 'bunsen-core/validator/custom-formats/ipv4-address'
 
 describe('Unit: validator/custom-formats/ipv4-address', function () {
   it('returns false when value is undefined', function () {

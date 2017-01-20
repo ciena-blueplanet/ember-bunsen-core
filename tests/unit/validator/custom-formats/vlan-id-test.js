@@ -1,6 +1,6 @@
+import vlanId from 'bunsen-core/validator/custom-formats/vlan-id'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import vlanId from 'bunsen-core/validator/custom-formats/vlan-id'
 
 describe('Unit: validator/custom-formats/vlan-id', function () {
   it('returns false when value is undefined', function () {

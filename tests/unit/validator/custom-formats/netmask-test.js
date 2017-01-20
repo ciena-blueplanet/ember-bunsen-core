@@ -1,6 +1,6 @@
+import netmask from 'bunsen-core/validator/custom-formats/netmask'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import netmask from 'bunsen-core/validator/custom-formats/netmask'
 
 describe('Unit: validator/custom-formats/ipv4-address', function () {
   it('returns false when value is undefined', function () {

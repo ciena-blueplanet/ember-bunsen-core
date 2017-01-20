@@ -1,9 +1,9 @@
 'use strict'
 
+import model from 'bunsen-core/validator/view-schemas/v2'
 import {expect} from 'chai'
 import {beforeEach, describe, it} from 'mocha'
 import ZSchema from 'z-schema'
-import model from 'bunsen-core/validator/view-schemas/v2'
 
 describe('v2 schema validation', () => {
   let schemaValidator

@@ -1,7 +1,7 @@
+import {CHANGE_VALUE} from 'bunsen-core/actions'
+import reducer from 'bunsen-core/reducer'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import reducer from 'bunsen-core/reducer'
-import {CHANGE_VALUE} from 'bunsen-core/actions'
 
 function getInitialStateWithValue (value) {
   return {

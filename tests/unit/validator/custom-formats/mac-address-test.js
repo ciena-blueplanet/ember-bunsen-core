@@ -1,6 +1,6 @@
+import macAddress from 'bunsen-core/validator/custom-formats/mac-address'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import macAddress from 'bunsen-core/validator/custom-formats/mac-address'
 
 describe('validator/custom-formats/mac-address', function () {
   it('returns false when value is undefined', function () {

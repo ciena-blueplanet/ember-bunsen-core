@@ -1,6 +1,6 @@
+import date from 'bunsen-core/validator/custom-formats/date'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import date from 'bunsen-core/validator/custom-formats/date'
 
 describe('Unit: validator/custom-formats/date', function () {
   it('returns false when value is undefined', function () {

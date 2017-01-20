@@ -1,8 +1,8 @@
 
+import {CHANGE_VALUE, VALIDATION_RESOLVED, changeValue, validate} from 'bunsen-core/actions'
 import {expect} from 'chai'
-import {describe, it} from 'mocha'
-import {changeValue, validate, CHANGE_VALUE, VALIDATION_RESOLVED} from 'bunsen-core/actions'
 import _ from 'lodash'
+import {describe, it} from 'mocha'
 
 describe('Unit: actions', function () {
   describe('changeValue action', function () {

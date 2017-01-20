@@ -1,12 +1,12 @@
-import {expect} from 'chai'
-import {it} from 'ember-mocha'
-import {beforeEach, describe} from 'mocha'
 import {
   integerRegex,
   ipAddressRangeRegex,
   translateMissingRequiredPropertyErrors,
   translateRegexErrors
 } from 'bunsen-core/validator/value'
+import {expect} from 'chai'
+import {it} from 'ember-mocha'
+import {beforeEach, describe} from 'mocha'
 
 describe('Unit: validator/value', function () {
   describe('translateMissingRequiredPropertyErrors()', function () {

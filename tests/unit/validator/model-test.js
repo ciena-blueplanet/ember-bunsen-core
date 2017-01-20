@@ -1,6 +1,6 @@
+import {validateSubModel} from 'bunsen-core/validator/model'
 import {expect} from 'chai'
 import {beforeEach, describe, it} from 'mocha'
-import {validateSubModel} from 'bunsen-core/validator/model'
 
 describe('Unit: validator/model', () => {
   let model, result

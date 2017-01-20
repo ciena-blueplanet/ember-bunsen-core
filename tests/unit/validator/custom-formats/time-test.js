@@ -1,6 +1,6 @@
+import time from 'bunsen-core/validator/custom-formats/time'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import time from 'bunsen-core/validator/custom-formats/time'
 
 describe('Unit: validator/custom-formats/time', function () {
   it('returns false when value is undefined', function () {

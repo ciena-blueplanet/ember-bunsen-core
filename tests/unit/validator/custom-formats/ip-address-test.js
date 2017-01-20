@@ -1,6 +1,6 @@
+import ipAddress from 'bunsen-core/validator/custom-formats/ip-address'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import ipAddress from 'bunsen-core/validator/custom-formats/ip-address'
 
 describe('validator/custom-formats/ip-address', function () {
   describe('IPv4', function () {

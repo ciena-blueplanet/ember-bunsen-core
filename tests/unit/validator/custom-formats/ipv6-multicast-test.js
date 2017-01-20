@@ -1,6 +1,6 @@
+import ipv6Multicast from 'bunsen-core/validator/custom-formats/ipv6-multicast'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import ipv6Multicast from 'bunsen-core/validator/custom-formats/ipv6-multicast'
 
 describe('validator/custom-formats/ipv6-multicast', function () {
   it('returns false when value is undefined', function () {

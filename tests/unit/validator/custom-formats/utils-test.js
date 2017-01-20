@@ -1,6 +1,6 @@
+import {hexToBinary, isMacMaskValid, isMacMulticastAddress} from 'bunsen-core/validator/custom-formats/utils'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import {hexToBinary, isMacMaskValid, isMacMulticastAddress} from 'bunsen-core/validator/custom-formats/utils'
 
 describe('validator/custom-formats/utils', function () {
   describe('hexToBinary', function () {

@@ -1,6 +1,6 @@
+import macPrefix from 'bunsen-core/validator/custom-formats/mac-prefix'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import macPrefix from 'bunsen-core/validator/custom-formats/mac-prefix'
 
 describe('validator/custom-formats/mac-prefix', function () {
   it('returns false when value is undefined', function () {

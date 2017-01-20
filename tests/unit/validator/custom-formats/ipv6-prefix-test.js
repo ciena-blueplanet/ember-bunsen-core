@@ -1,6 +1,6 @@
+import ipv6Prefix from 'bunsen-core/validator/custom-formats/ipv6-prefix'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import ipv6Prefix from 'bunsen-core/validator/custom-formats/ipv6-prefix'
 
 describe('validator/custom-formats/ipv6-prefix', function () {
   it('returns false when value is undefined', function () {

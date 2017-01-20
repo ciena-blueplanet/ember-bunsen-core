@@ -1,6 +1,6 @@
+import ipv6Interface from 'bunsen-core/validator/custom-formats/ipv6-interface'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import ipv6Interface from 'bunsen-core/validator/custom-formats/ipv6-interface'
 
 describe('validator/custom-formats/IPv6-interface', function () {
   it('returns false when value is undefined', function () {
