@@ -1,3 +1,8 @@
+# 0.16.2
+
+* **Upgraded** `bunsen-core` to latest version to fix issues with primitive arrays.
+
+
 # 0.16.1
 
 * **Upgraded** to test against Ember 2.11.
