@@ -1,3 +1,8 @@
+# 0.17.0
+
+* **Upgraded** `bunsen-core` to latest version for non-Ember Data driven API selects.
+
+
 # 0.16.2
 
 * **Upgraded** `bunsen-core` to latest version to fix issues with primitive arrays.
