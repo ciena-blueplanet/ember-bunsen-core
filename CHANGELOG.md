@@ -1,3 +1,8 @@
+# 0.17.1
+
+* Updated `bunsen-core` blueprint to 0.22.1
+
+
 # 0.17.0
 
 * **Upgraded** `bunsen-core` to latest version for non-Ember Data driven API selects.
