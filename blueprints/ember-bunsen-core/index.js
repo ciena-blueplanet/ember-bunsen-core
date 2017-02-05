@@ -7,9 +7,9 @@ module.exports = {
         return this.addAddonsToProject({
           packages: [
             {name: 'ember-cli-moment-shim', target: '^2.0.0'},
-            {name: 'ember-lodash-shim', target: '^1.0.0'},
+            {name: 'ember-lodash-shim', target: '^1.2.0'},
             {name: 'ember-seamless-immutable-shim', target: '^1.0.0'},
-            {name: 'ember-z-schema', target: '^2.0.0'}
+            {name: 'ember-z-schema', target: '^2.2.0'}
           ]
         })
       })
