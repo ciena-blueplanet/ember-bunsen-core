@@ -65,5 +65,44 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "ember-lodash-shim": {
+    "includes": [
+      "assign",
+      "capitalize",
+      "chain",
+      "clone",
+      "cloneDeep",
+      "defaults",
+      "difference",
+      "every",
+      "find",
+      "forEach",
+      "forIn",
+      "get",
+      "groupBy",
+      "includes",
+      "isEmpty",
+      "isNumber",
+      "isObject",
+      "isPlainObject",
+      "isString",
+      "last",
+      "map",
+      "mapKeys",
+      "mapValues",
+      "partial",
+      "pick",
+      "pickBy",
+      "reduce",
+      "size",
+      "some",
+      "startCase",
+      "transform",
+      "uniq",
+      "without"
+    ],
+    "includeLodash3Exports": false,
+    "whitelist": true
   }
 }
