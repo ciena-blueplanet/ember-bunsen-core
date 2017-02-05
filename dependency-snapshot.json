@@ -1,6 +1,6 @@
 {
   "name": "ember-bunsen-core",
-  "version": "0.17.1",
+  "version": "0.18.0",
   "dependencies": {
     "5to6-codemod": {
       "version": "1.1.3",
@@ -962,9 +962,9 @@
       "dev": true
     },
     "basic-auth": {
-      "version": "1.0.4",
-      "from": "basic-auth@>=1.0.3 <1.1.0",
-      "resolved": "https://registry.npmjs.org/basic-auth/-/basic-auth-1.0.4.tgz",
+      "version": "1.1.0",
+      "from": "basic-auth@>=1.1.0 <1.2.0",
+      "resolved": "https://registry.npmjs.org/basic-auth/-/basic-auth-1.1.0.tgz",
       "dev": true
     },
     "better-assert": {
@@ -1065,9 +1065,9 @@
       "dev": true
     },
     "broccoli-builder": {
-      "version": "0.18.3",
+      "version": "0.18.4",
       "from": "broccoli-builder@>=0.18.0 <0.19.0",
-      "resolved": "https://registry.npmjs.org/broccoli-builder/-/broccoli-builder-0.18.3.tgz",
+      "resolved": "https://registry.npmjs.org/broccoli-builder/-/broccoli-builder-0.18.4.tgz",
       "dev": true
     },
     "broccoli-caching-writer": {
@@ -1130,6 +1130,32 @@
           "version": "0.24.0",
           "from": "fs-extra@>=0.24.0 <0.25.0",
           "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-0.24.0.tgz",
+          "dev": true
+        }
+      }
+    },
+    "broccoli-file-creator": {
+      "version": "1.1.1",
+      "from": "broccoli-file-creator@>=1.1.1 <2.0.0",
+      "resolved": "https://registry.npmjs.org/broccoli-file-creator/-/broccoli-file-creator-1.1.1.tgz",
+      "dev": true,
+      "dependencies": {
+        "broccoli-kitchen-sink-helpers": {
+          "version": "0.2.9",
+          "from": "broccoli-kitchen-sink-helpers@>=0.2.0 <0.3.0",
+          "resolved": "https://registry.npmjs.org/broccoli-kitchen-sink-helpers/-/broccoli-kitchen-sink-helpers-0.2.9.tgz",
+          "dev": true
+        },
+        "glob": {
+          "version": "5.0.15",
+          "from": "glob@>=5.0.10 <6.0.0",
+          "resolved": "https://registry.npmjs.org/glob/-/glob-5.0.15.tgz",
+          "dev": true
+        },
+        "rsvp": {
+          "version": "3.0.21",
+          "from": "rsvp@>=3.0.6 <3.1.0",
+          "resolved": "https://registry.npmjs.org/rsvp/-/rsvp-3.0.21.tgz",
           "dev": true
         }
       }
@@ -1263,6 +1289,12 @@
           "dev": true
         }
       }
+    },
+    "broccoli-writer": {
+      "version": "0.1.1",
+      "from": "broccoli-writer@>=0.1.1 <0.2.0",
+      "resolved": "https://registry.npmjs.org/broccoli-writer/-/broccoli-writer-0.1.1.tgz",
+      "dev": true
     },
     "browser-resolve": {
       "version": "1.11.2",
@@ -1828,9 +1860,9 @@
       "dev": true
     },
     "ember-cli-babel": {
-      "version": "5.2.1",
+      "version": "5.2.2",
       "from": "ember-cli-babel@>=5.1.6 <6.0.0",
-      "resolved": "https://registry.npmjs.org/ember-cli-babel/-/ember-cli-babel-5.2.1.tgz"
+      "resolved": "https://registry.npmjs.org/ember-cli-babel/-/ember-cli-babel-5.2.2.tgz"
     },
     "ember-cli-broccoli-sane-watcher": {
       "version": "2.0.4",
@@ -2074,9 +2106,9 @@
       "dev": true
     },
     "ember-lodash-shim": {
-      "version": "1.1.1",
-      "from": "ember-lodash-shim@>=1.1.1 <2.0.0",
-      "resolved": "https://registry.npmjs.org/ember-lodash-shim/-/ember-lodash-shim-1.1.1.tgz",
+      "version": "1.2.0",
+      "from": "ember-lodash-shim@>=1.2.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/ember-lodash-shim/-/ember-lodash-shim-1.2.0.tgz",
       "dev": true
     },
     "ember-mocha": {
@@ -2092,9 +2124,9 @@
       "dev": true
     },
     "ember-router-generator": {
-      "version": "1.2.2",
+      "version": "1.2.3",
       "from": "ember-router-generator@>=1.0.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/ember-router-generator/-/ember-router-generator-1.2.2.tgz",
+      "resolved": "https://registry.npmjs.org/ember-router-generator/-/ember-router-generator-1.2.3.tgz",
       "dev": true,
       "dependencies": {
         "esprima": {
@@ -2170,9 +2202,9 @@
       "dev": true
     },
     "ember-z-schema": {
-      "version": "2.1.1",
-      "from": "ember-z-schema@>=2.1.1 <3.0.0",
-      "resolved": "https://registry.npmjs.org/ember-z-schema/-/ember-z-schema-2.1.1.tgz",
+      "version": "2.2.0",
+      "from": "ember-z-schema@>=2.2.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/ember-z-schema/-/ember-z-schema-2.2.0.tgz",
       "dev": true
     },
     "encodeurl": {
@@ -2318,9 +2350,9 @@
       "dev": true
     },
     "eslint": {
-      "version": "3.14.1",
+      "version": "3.15.0",
       "from": "eslint@>=3.14.0 <4.0.0",
-      "resolved": "https://registry.npmjs.org/eslint/-/eslint-3.14.1.tgz",
+      "resolved": "https://registry.npmjs.org/eslint/-/eslint-3.15.0.tgz",
       "dev": true,
       "dependencies": {
         "globals": {
@@ -2404,14 +2436,14 @@
       "dev": true
     },
     "espree": {
-      "version": "3.3.2",
-      "from": "espree@>=3.3.1 <4.0.0",
-      "resolved": "https://registry.npmjs.org/espree/-/espree-3.3.2.tgz",
+      "version": "3.4.0",
+      "from": "espree@>=3.4.0 <4.0.0",
+      "resolved": "https://registry.npmjs.org/espree/-/espree-3.4.0.tgz",
       "dev": true,
       "dependencies": {
         "acorn": {
           "version": "4.0.4",
-          "from": "acorn@>=4.0.1 <5.0.0",
+          "from": "acorn@4.0.4",
           "resolved": "https://registry.npmjs.org/acorn/-/acorn-4.0.4.tgz",
           "dev": true
         }
@@ -3971,24 +4003,10 @@
       "dev": true
     },
     "morgan": {
-      "version": "1.7.0",
+      "version": "1.8.0",
       "from": "morgan@>=1.5.2 <2.0.0",
-      "resolved": "https://registry.npmjs.org/morgan/-/morgan-1.7.0.tgz",
-      "dev": true,
-      "dependencies": {
-        "debug": {
-          "version": "2.2.0",
-          "from": "debug@>=2.2.0 <2.3.0",
-          "resolved": "https://registry.npmjs.org/debug/-/debug-2.2.0.tgz",
-          "dev": true
-        },
-        "ms": {
-          "version": "0.7.1",
-          "from": "ms@0.7.1",
-          "resolved": "https://registry.npmjs.org/ms/-/ms-0.7.1.tgz",
-          "dev": true
-        }
-      }
+      "resolved": "https://registry.npmjs.org/morgan/-/morgan-1.8.0.tgz",
+      "dev": true
     },
     "mout": {
       "version": "1.0.0",
@@ -6407,9 +6425,9 @@
       "dev": true,
       "dependencies": {
         "acorn": {
-          "version": "4.0.4",
+          "version": "4.0.8",
           "from": "acorn@>=4.0.1 <5.0.0",
-          "resolved": "https://registry.npmjs.org/acorn/-/acorn-4.0.4.tgz",
+          "resolved": "https://registry.npmjs.org/acorn/-/acorn-4.0.8.tgz",
           "dev": true
         }
       }

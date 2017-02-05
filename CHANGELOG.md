@@ -1,3 +1,8 @@
+# 0.18.0
+
+* **Added** `ember-lodash-shim` configuration to optimize build to only include necessary `lodash` methods.
+
+
 # 0.17.1
 
 * Updated `bunsen-core` blueprint to 0.22.1
