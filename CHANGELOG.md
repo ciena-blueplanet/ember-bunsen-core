@@ -1,3 +1,8 @@
+# 0.19.0
+
+* **Changed** `bunsen-core` from a blueprint installation to a direct dependency so consumers don't have to manage it's version on top of this addon.
+
+
 # 0.18.0
 
 * **Added** `ember-lodash-shim` configuration to optimize build to only include necessary `lodash` methods.
