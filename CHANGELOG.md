@@ -80,7 +80,8 @@
 
 # 0.12.0
 
-* **Added** new `forceValidation` argument to `validate` action to allow consumer to force re-validation when the value is the same.
+* **Added** new `forceValidation` argument to `validate` action to allow consumer to force re-validation when the
+value is the same.
 
 
 # 0.11.0
@@ -136,7 +137,8 @@
 
 # 0.10.0
 
-* **Upgraded** to latest `bunsen-core` to get new MAC address custom formats and `modelType` validation for select renderers.
+* **Upgraded** to latest `bunsen-core` to get new MAC address custom formats and `modelType` validation for select
+renderers.
 
 
 
@@ -341,7 +343,8 @@ Use a `# CHANGELOG` section in your Pull Request description to auto-populate th
 
 # 0.6.1
 
-* **Upgraded** to latest `bunsen-core` which fixes a bug with cells that define `children` but not `model` or `extends`.
+* **Upgraded** to latest `bunsen-core` which fixes a bug with cells that define `children` but not `model` or
+`extends`.
 
 
 
@@ -424,4 +427,3 @@ Use a `# CHANGELOG` section in your Pull Request description to auto-populate th
 # 0.0.1
 No CHANGELOG section found in Pull Request description.
 Use a `# CHANGELOG` section in your Pull Request description to auto-populate the `CHANGELOG.md`
-
