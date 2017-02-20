@@ -1,3 +1,8 @@
+# 0.19.1
+
+* **Added** `.pr-bumper.json` file to fix build publishing by disabling dependency snapshots.
+
+
 # 0.19.0
 
 * **Changed** `bunsen-core` from a blueprint installation to a direct dependency so consumers don't have to manage it's version on top of this addon.
