@@ -37,6 +37,7 @@
     "ember-cli-uglify": "^1.2.0",
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-export-application-global": "^1.1.1",
+    "ember-get-config": "^0.2.1",
     "ember-load-initializers": "0.6.3",
     "ember-lodash-shim": "^1.2.0",
     "ember-resolver": "^2.1.1",
@@ -59,7 +60,7 @@
   ],
   "dependencies": {
     "broccoli-merge-trees": "^1.0.0",
-    "bunsen-core": "0.22.1",
+    "bunsen-core": "0.23.1",
     "ember-cli-babel": "^5.1.6"
   },
   "ember-addon": {
