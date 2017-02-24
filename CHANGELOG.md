@@ -1,3 +1,8 @@
+# 0.20.0
+
+* **Upgraded** `bunsen-core` to support spread options for renderers.
+
+
 # 0.19.1
 
 * **Added** `.pr-bumper.json` file to fix build publishing by disabling dependency snapshots.
