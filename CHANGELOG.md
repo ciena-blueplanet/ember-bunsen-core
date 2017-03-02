@@ -1,3 +1,8 @@
+# 0.21.1
+
+**Updated** bunsen-core which includes a fix for model conditionals.
+
+
 # 0.21.0
 
 * **Replaced** bower dependencies with node dependencies.
