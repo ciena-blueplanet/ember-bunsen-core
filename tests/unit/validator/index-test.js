@@ -1,16 +1,16 @@
-import {expect} from 'chai'
-import _ from 'lodash'
-import {it} from 'ember-mocha'
-import {beforeEach, describe} from 'mocha'
 import validate from 'bunsen-core/validator'
+import {expect} from 'chai'
+import {it} from 'ember-mocha'
+import _ from 'lodash'
+import {beforeEach, describe} from 'mocha'
 // import viewSchema from 'bunsen-core/validator/view-schema'
 // import readmeContents from '!!raw!../../../README.md'
-import missingReqAttrs from './fixtures/invalid/missing-required-attributes'
+import badCells from './fixtures/invalid/bad-cells'
 import invalidTypeVersion from './fixtures/invalid/invalid-type-version'
+import missingReqAttrs from './fixtures/invalid/missing-required-attributes'
+import multipleCells from './fixtures/multiple-cells'
 import simpleFormConfig from './fixtures/simple-form'
 import simpleFormModel from './fixtures/simple-form-model'
-import badCells from './fixtures/invalid/bad-cells'
-import multipleCells from './fixtures/multiple-cells'
 import transforms from './fixtures/transforms'
 
 describe('Unit: validator', function () {
@@ -44,6 +44,261 @@ describe('Unit: validator', function () {
 
       it('validates', function () {
         expect(result).to.eql({
+          errors: [],
+          warnings: []
+        })
+      })
+    })
+
+    // Testing various ways to define cells
+    ;[
+      {
+        cells: [
+          {
+            model: 'foo'
+          }
+        ],
+        type: 'form',
+        version: '2.0'
+      },
+      {
+        cellDefinitions: {
+          foo: {
+            model: 'foo'
+          }
+        },
+        cells: [
+          {
+            extends: 'foo'
+          }
+        ],
+        type: 'form',
+        version: '2.0'
+      },
+      {
+        cells: [
+          {
+            children: [
+              {
+                model: 'foo'
+              }
+            ]
+          }
+        ],
+        type: 'form',
+        version: '2.0'
+      },
+      {
+        cellDefinitions: {
+          foo: {
+            model: 'foo'
+          }
+        },
+        cells: [
+          {
+            children: [
+              {
+                extends: 'foo'
+              }
+            ]
+          }
+        ],
+        type: 'form',
+        version: '2.0'
+      },
+      {
+        cellDefinitions: {
+          foo: {
+            children: [
+              {
+                model: 'foo'
+              }
+            ]
+          }
+        },
+        cells: [
+          {
+            extends: 'foo'
+          }
+        ],
+        type: 'form',
+        version: '2.0'
+      },
+      {
+        containers: [
+          {
+            id: 'main',
+            rows: [
+              [
+                {
+                  model: 'foo'
+                }
+              ]
+            ]
+          }
+        ],
+        rootContainers: [
+          {
+            container: 'main',
+            label: 'Main'
+          }
+        ],
+        type: 'form',
+        version: '1.0'
+      }
+    ]
+      .forEach((view) => {
+        describe('when valid', function () {
+          var result
+
+          beforeEach(() => {
+            const model = {
+              properties: {
+                foo: {
+                  type: 'string'
+                }
+              },
+              type: 'object'
+            }
+
+            const renderers = []
+
+            function validateRenderer (rendererName) {
+              return rendererName === 'foo-bar-renderer'
+            }
+
+            result = validate(view, model, renderers, validateRenderer)
+          })
+
+          it('returns proper result', function () {
+            expect(result).deep.equal({
+              errors: [],
+              warnings: []
+            })
+          })
+        })
+      })
+
+    describe('when valid', function () {
+      var result
+
+      beforeEach(() => {
+        const model = {
+          type: 'object',
+          properties: {
+            nested: {
+              type: 'object',
+              properties: {
+                foo: {
+                  type: 'object',
+                  properties: {
+                    foosValue: {
+                      type: 'string'
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        const view = {
+          type: 'form',
+          version: '2.0',
+          cells: [
+            {
+              children: [
+                {
+                  label: 'Main',
+                  model: 'nested',
+                  children: [
+                    {
+                      label: 'Foo',
+                      model: 'foo',
+                      children: [
+                        {
+                          label: 'value',
+                          model: 'foosValue'
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+
+        const renderers = []
+
+        function validateRenderer (rendererName) {
+          return rendererName === 'foo-bar-renderer'
+        }
+
+        result = validate(view, model, renderers, validateRenderer)
+      })
+
+      it('returns proper result', function () {
+        expect(result).deep.equal({
+          errors: [],
+          warnings: []
+        })
+      })
+    })
+
+    describe('when valid', function () {
+      var result
+
+      beforeEach(function () {
+        const model = {
+          properties: {
+            foo: {
+              properties: {
+                bar: {
+                  properties: {
+                    baz: {
+                      type: 'string'
+                    }
+                  },
+                  type: 'object'
+                }
+              },
+              type: 'object'
+            }
+          },
+          type: 'object'
+        }
+
+        const view = {
+          cells: [
+            {
+              children: [
+                {
+                  model: 'baz'
+                }
+              ],
+              model: 'foo.bar'
+            }
+          ],
+          type: 'form',
+          version: '2.0'
+        }
+
+        const renderers = []
+
+        function validateRenderer (rendererName) {
+          return rendererName === 'foo-bar-renderer'
+        }
+
+        function validateModelType () {
+          return true
+        }
+
+        result = validate(view, model, renderers, validateRenderer, validateModelType)
+      })
+
+      it('returns proper result', function () {
+        expect(result).deep.equal({
           errors: [],
           warnings: []
         })
@@ -122,6 +377,120 @@ describe('Unit: validator', function () {
           path: '#/cells/0',
           message: 'Invalid value "baz" for "extends" Valid options are ["bar","foo"]'
         }])
+      })
+    })
+
+    describe('when modelType is invalid on root cell', function () {
+      var result
+
+      beforeEach(function () {
+        const model = {
+          properties: {
+            foo: {
+              type: 'string'
+            }
+          },
+          type: 'object'
+        }
+
+        const view = {
+          cells: [
+            {
+              model: 'foo',
+              renderer: {
+                name: 'select',
+                options: {
+                  modelType: 'bar'
+                }
+              }
+            }
+          ],
+          type: 'form',
+          version: '2.0'
+        }
+
+        const renderers = []
+
+        function validateRenderer (rendererName) {
+          return true
+        }
+
+        function validateModelType () {
+          return false
+        }
+
+        result = validate(view, model, renderers, validateRenderer, validateModelType)
+      })
+
+      it('returns proper result', function () {
+        expect(result).deep.equal({
+          errors: [
+            {
+              message: 'Invalid modelType reference "bar"',
+              path: '#/cells/0/renderer/options'
+            }
+          ],
+          warnings: []
+        })
+      })
+    })
+
+    describe('when modelType is invalid on root cell child', function () {
+      var result
+
+      beforeEach(function () {
+        const model = {
+          properties: {
+            foo: {
+              type: 'string'
+            }
+          },
+          type: 'object'
+        }
+
+        const view = {
+          cells: [
+            {
+              children: [
+                {
+                  model: 'foo',
+                  renderer: {
+                    name: 'select',
+                    options: {
+                      modelType: 'bar'
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          type: 'form',
+          version: '2.0'
+        }
+
+        const renderers = []
+
+        function validateRenderer (rendererName) {
+          return true
+        }
+
+        function validateModelType () {
+          return false
+        }
+
+        result = validate(view, model, renderers, validateRenderer, validateModelType)
+      })
+
+      it('returns proper result', function () {
+        expect(result).deep.equal({
+          errors: [
+            {
+              message: 'Invalid modelType reference "bar"',
+              path: '#/cells/0/children/0/renderer/options'
+            }
+          ],
+          warnings: []
+        })
       })
     })
   })

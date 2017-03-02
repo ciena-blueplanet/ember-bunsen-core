@@ -1,10 +1,10 @@
+import {dereference, getPath} from 'bunsen-core/dereference'
 import {expect} from 'chai'
 import _ from 'lodash'
 import {beforeEach, describe, it} from 'mocha'
-import {dereference, getPath} from 'bunsen-core/dereference'
 
-import cyclical from '../fixtures/cyclical'
 import complex from '../fixtures/complex-model'
+import cyclical from '../fixtures/cyclical'
 import refs from '../fixtures/refs'
 
 describe('Unit: dereference', () => {

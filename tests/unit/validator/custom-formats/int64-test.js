@@ -1,41 +1,41 @@
+import int64 from 'bunsen-core/validator/custom-formats/int64'
 import {expect} from 'chai'
 import {describe, it} from 'mocha'
-import int64 from 'bunsen-core/validator/custom-formats/int64'
 
-describe('Unit: validator/custom-formats/int64', () => {
-  it('returns false when value is undefined', () => {
-    expect(int64(undefined)).to.be.false
+describe('Unit: validator/custom-formats/int64', function () {
+  it('returns false when value is undefined', function () {
+    expect(int64(undefined)).to.equal(false)
   })
 
-  it('returns false when value is null', () => {
-    expect(int64(null)).to.be.false
+  it('returns false when value is null', function () {
+    expect(int64(null)).to.equal(false)
   })
 
-  it('returns false when value is a non-numeric string', () => {
-    expect(int64('test')).to.be.false
+  it('returns false when value is a non-numeric string', function () {
+    expect(int64('test')).to.equal(false)
   })
 
-  it('returns false when value is an object', () => {
-    expect(int64({})).to.be.false
+  it('returns false when value is an object', function () {
+    expect(int64({})).to.equal(false)
   })
 
-  it('returns false when value is an array', () => {
-    expect(int64([])).to.be.false
+  it('returns false when value is an array', function () {
+    expect(int64([])).to.equal(false)
   })
 
-  it('returns false when value is a float', () => {
-    expect(int64(0.5)).to.be.false
+  it('returns false when value is a float', function () {
+    expect(int64(0.5)).to.equal(false)
   })
 
-  it('returns false when value is NaN', () => {
-    expect(int64(NaN)).to.be.false
+  it('returns false when value is NaN', function () {
+    expect(int64(NaN)).to.equal(false)
   })
 
-  it('returns false when value is Infinity', () => {
-    expect(int64(Infinity)).to.be.false
+  it('returns false when value is Infinity', function () {
+    expect(int64(Infinity)).to.equal(false)
   })
 
-  it('returns true when value is an integer', () => {
-    expect(int64(0)).to.be.true
+  it('returns true when value is an integer', function () {
+    expect(int64(0)).to.equal(true)
   })
 })

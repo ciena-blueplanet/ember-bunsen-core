@@ -1,7 +1,7 @@
-const expect = chai.expect
-import {describe, it} from 'mocha'
-import reducer from 'bunsen-core/reducer'
 import {CHANGE_VALUE, VALIDATION_RESOLVED} from 'bunsen-core/actions'
+import reducer from 'bunsen-core/reducer'
+import {expect} from 'chai'
+import {describe, it} from 'mocha'
 
 describe('Unit: reducer', function () {
   describe('initial state', function () {
@@ -126,6 +126,7 @@ describe('Unit: reducer', function () {
 
       expect(changedState).to.eql({
         errors: [],
+        lastAction: 'VALIDATION_RESOLVED',
         validationResult: ['you look kinda fat'],
         value: {},
         baseModel: {}
