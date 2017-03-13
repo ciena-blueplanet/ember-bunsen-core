@@ -1,3 +1,7 @@
+# 0.22.0
+- updated bunsen-core
+
+
 # 0.21.1
 
 **Updated** bunsen-core which includes a fix for model conditionals.
