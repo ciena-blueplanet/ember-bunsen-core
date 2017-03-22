@@ -41,22 +41,17 @@
     "ember-export-application-global": "^1.1.1",
     "ember-get-config": "^0.2.1",
     "ember-load-initializers": "0.6.3",
-    "ember-lodash-shim": "^2.0.0",
     "ember-resolver": "^2.1.1",
     "ember-seamless-immutable-shim": "^2.0.0",
     "ember-sinon": "0.6.0",
     "ember-source": "^2.11.2",
     "ember-test-utils": "^1.11.0",
-    "ember-validator-shim": "^2.1.1",
-    "ember-z-schema": "^2.2.0",
     "eslint": "^3.2.1",
     "eslint-config-frost-standard": "^5.0.0",
     "eslint-plugin-mocha": "^4.3.0",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.0",
-    "loader.js": "^4.1.0",
-    "validator": "6.2.1",
-    "z-schema": "3.18.2"
+    "loader.js": "^4.1.0"
   },
   "keywords": [
     "ember-addon",
@@ -67,7 +62,12 @@
   "dependencies": {
     "broccoli-merge-trees": "^1.0.0",
     "bunsen-core": "0.26.0",
-    "ember-cli-babel": "^5.1.6"
+    "ember-cli-babel": "^5.1.6",
+    "ember-cli-moment-shim": "^2.0.0",
+    "ember-lodash-shim": "^2.0.0",
+    "ember-seamless-immutable-shim": "^2.0.0",
+    "ember-validator-shim": "^2.3.0",
+    "ember-z-schema": "^2.4.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
