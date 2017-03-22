@@ -1,3 +1,7 @@
+# 0.23.1 (2017-03-22)
+
+* **Upgraded** `bunsen-core` to version `0.26.1`.
+
 # 0.23.0 (2017-03-22)
 
 * **Replaced** blueprints with npm dependencies.
