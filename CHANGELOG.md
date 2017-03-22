@@ -1,3 +1,7 @@
+# 0.23.0 (2017-03-22)
+
+* **Replaced** blueprints with npm dependencies.
+
 # 0.22.0
 - updated bunsen-core
 
