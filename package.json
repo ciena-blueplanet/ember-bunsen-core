@@ -67,7 +67,7 @@
     "ember-lodash-shim": "^2.0.0",
     "ember-seamless-immutable-shim": "^2.0.0",
     "ember-validator-shim": "^2.3.0",
-    "ember-z-schema": "^2.3.0"
+    "ember-z-schema": "^2.4.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
