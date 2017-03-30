@@ -1,3 +1,15 @@
+# 0.23.1 (2017-03-22)
+
+* **Upgraded** `bunsen-core` to version `0.26.1`.
+
+# 0.23.0 (2017-03-22)
+
+* **Replaced** blueprints with npm dependencies.
+
+# 0.22.0
+- updated bunsen-core
+
+
 # 0.21.1
 
 **Updated** bunsen-core which includes a fix for model conditionals.
