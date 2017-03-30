@@ -1,3 +1,7 @@
+# 0.24.0 (2017-03-30)
+* now includes bunsen-core 0.27.0, which provides `width` support for selects
+
+
 # 0.23.1 (2017-03-22)
 
 * **Upgraded** `bunsen-core` to version `0.26.1`.
