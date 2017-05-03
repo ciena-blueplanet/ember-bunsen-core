@@ -3,35 +3,34 @@ import {expect} from 'chai'
 import {describe, it} from 'mocha'
 
 describe('utils', function () {
-  describe('.getModelPath()', function () {
-    it('handles top-level properties', function () {
-      expect(utils.getModelPath('fooBar')).to.equal('properties.fooBar')
-    })
-
-    it('handles nested properties', function () {
-      expect(utils.getModelPath('foo.bar.baz')).to.equal('properties.foo.properties.bar.properties.baz')
-    })
-
-    it('handles invalid trailing dot reference', function () {
-      expect(utils.getModelPath('foo.bar.')).to.equal(undefined)
-    })
-
-    it('handles invalid leading dot reference', function () {
-      expect(utils.getModelPath('.foo.bar')).to.equal(undefined)
-    })
-
-    it('handles model with dependency', function () {
-      const expected = 'dependencies.useEft.properties.routingNumber'
-      expect(utils.getModelPath('routingNumber', 'useEft')).to.equal(expected)
-    })
-
-    it('handles model with dependency', function () {
-      const expected = 'properties.paymentInfo.dependencies.useEft.properties.routingNumber'
-      expect(utils.getModelPath('paymentInfo.routingNumber', 'paymentInfo.useEft')).to.equal(expected)
-    })
-
-    it('handles properties on array items', function () {
-      expect(utils.getModelPath('foo.bar.0.baz')).to.equal('properties.foo.properties.bar.items.properties.baz')
+  describe('.getModelPath()', () => {
+    it('returns a BunsenModelPath', function () {
+      const model = {
+        type: 'object',
+        properties: {
+          foo: {
+            type: 'object',
+            properties: {
+              bar: {
+                type: 'string'
+              }
+            },
+            dependencies: {
+              bar: {
+                properties: {
+                  baz: {
+                    type: 'string'
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      const path = 'foo.baz'
+      const modelPath = utils.getModelPath(model, path)
+      expect(modelPath).to.be.instanceOf(utils.BunsenModelPath)
+      expect(modelPath.modelPath()).to.equal('properties.foo.dependencies.bar.properties.baz')
     })
   })
 
