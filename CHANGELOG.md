@@ -1,3 +1,8 @@
+# 0.24.2 (2017-05-04)
+
+* **Fixed** publish to be based on `6.9.1` node and not `stable` (which has moved to `7.10.0`)
+
+
 # 0.24.1 (2017-05-04)
 
 * **Updated** `bunsen-core` to pick up [this fix](https://github.com/ciena-blueplanet/bunsen-core/pull/86)
