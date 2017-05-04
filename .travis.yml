@@ -32,6 +32,8 @@ env:
 
 matrix:
   fast_finish: true
+  allow_failures:
+  - node_js: 'stable'
 
 before_install:
 - npm config set spin false
@@ -62,7 +64,7 @@ deploy:
   on:
     all_branches: true
     condition: "$EMBER_TRY_SCENARIO = 'default'"
-    node: 'stable'
+    node: '6.9.1'
     tags: true
 
 notifications:

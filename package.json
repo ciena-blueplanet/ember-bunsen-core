@@ -1,6 +1,6 @@
 {
   "name": "ember-bunsen-core",
-  "version": "0.24.0",
+  "version": "0.24.4",
   "description": "Core bunsen library for Ember apps",
   "directories": {
     "doc": "doc",
@@ -61,7 +61,7 @@
   ],
   "dependencies": {
     "broccoli-merge-trees": "^1.0.0",
-    "bunsen-core": "0.28.0",
+    "bunsen-core": "0.27.3",
     "ember-cli-babel": "^5.1.6",
     "ember-cli-moment-shim": "^2.0.0",
     "ember-lodash-shim": "^2.0.0",
