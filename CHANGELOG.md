@@ -1,3 +1,8 @@
+# 0.24.1 (2017-05-04)
+
+* **Updated** `bunsen-core` to pick up [this fix](https://github.com/ciena-blueplanet/bunsen-core/pull/86)
+
+
 # 0.24.0 (2017-03-30)
 * now includes bunsen-core 0.27.0, which provides `width` support for selects
 
