@@ -1,3 +1,6 @@
+# 0.25.0 (2017-05-04)
+**Updated** `bunsen-core` dependency to 0.28.0
+
 # 0.24.4 (2017-05-04)
 
 * **Updated** bunsen-core dependency to fix an issue with files being erroneously pruned from form values
