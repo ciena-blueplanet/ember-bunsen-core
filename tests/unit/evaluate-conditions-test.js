@@ -12,6 +12,7 @@ import modelWithArray from '../fixtures/conditions/array-model'
 import modelWithDeepConditionals from '../fixtures/conditions/deep-model'
 import modelWithDefinitions from '../fixtures/conditions/definitions-model'
 import modelWithRelativePaths from '../fixtures/conditions/relative-paths-model'
+import modelWithRequiredConditionals from '../fixtures/conditions/required-conditionals-model'
 import simpleModel from '../fixtures/conditions/simple-model'
 
 /**
@@ -30,25 +31,24 @@ function dereferenceAndEval (model, value) {
 describe('evaluate-conditions', () => {
   var model, newModel, value, expected
 
-  // FIXME: in the next major release, we want this to behave differently, the 'if' condition should not invert
-  // in functionality when 'set: true' is present, that should just be an initial state that can be overwridden in
-  // the 'then' block
-  it('hides a conditional property when it is showing by default and one of its conditions is met', () => {
+  it('can add required properties', function () {
     var data = {
       tagType: 'single-tagged'
     }
-
-    model = _.cloneDeep(simpleModel)
-    model.properties.tag.set = true
+    var model = _.cloneDeep(modelWithRequiredConditionals)
     var newModel = dereferenceAndEval(model, data)
     expect(newModel).to.eql({
-      'type': 'object',
-      'properties': {
-        'tagType': {
-          'type': 'string',
-          'enum': ['untagged', 'single-tagged', 'double-tagged', 'foo-tagged']
+      type: 'object',
+      properties: {
+        tagType: {
+          type: 'string',
+          enum: ['untagged', 'single-tagged', 'double-tagged']
+        },
+        tag: {
+          type: 'string'
         }
-      }
+      },
+      required: ['tag']
     })
   })
 
@@ -138,21 +138,6 @@ describe('evaluate-conditions', () => {
         })
         delete expected.properties.tag2
 
-        expect(newModel).to.eql(expected)
-      })
-    })
-
-    describe('when a conditional property defaults to set', () => {
-      beforeEach(() => {
-        model.properties.tag.set = true
-        value = {}
-        newModel = dereferenceAndEval(model, value)
-      })
-
-      it('includes the defaulted property', () => {
-        delete expected.properties.tag.conditions
-        delete expected.properties.tag.set
-        delete expected.properties.tag2
         expect(newModel).to.eql(expected)
       })
     })
@@ -253,46 +238,44 @@ describe('evaluate-conditions', () => {
           properties: {
             tags: {
               type: 'array',
-              items: {
-                anyOf: [{
-                  type: 'object',
-                  properties: {
-                    tagType: {
-                      type: 'string',
-                      enum: ['untagged', 'single-tagged', 'double-tagged']
-                    },
-                    tag: {
-                      type: 'number',
-                      default: 20,
-                      multipleOf: 1.0,
-                      minimum: 0,
-                      maximum: 4094
-                    }
+              items: [{
+                type: 'object',
+                properties: {
+                  tagType: {
+                    type: 'string',
+                    enum: ['untagged', 'single-tagged', 'double-tagged']
+                  },
+                  tag: {
+                    type: 'number',
+                    default: 20,
+                    multipleOf: 1.0,
+                    minimum: 0,
+                    maximum: 4094
                   }
-                }, {
-                  type: 'object',
-                  properties: {
-                    tagType: {
-                      type: 'string',
-                      enum: ['untagged', 'single-tagged', 'double-tagged']
-                    },
-                    tag: {
-                      type: 'number',
-                      default: 20,
-                      multipleOf: 1.0,
-                      minimum: 0,
-                      maximum: 4094
-                    },
-                    tag2: {
-                      type: 'number',
-                      default: 3000,
-                      multipleOf: 1.0,
-                      minimum: 0,
-                      maximum: 4094
-                    }
+                }
+              }, {
+                type: 'object',
+                properties: {
+                  tagType: {
+                    type: 'string',
+                    enum: ['untagged', 'single-tagged', 'double-tagged']
+                  },
+                  tag: {
+                    type: 'number',
+                    default: 20,
+                    multipleOf: 1.0,
+                    minimum: 0,
+                    maximum: 4094
+                  },
+                  tag2: {
+                    type: 'number',
+                    default: 3000,
+                    multipleOf: 1.0,
+                    minimum: 0,
+                    maximum: 4094
                   }
-                }]
-              }
+                }
+              }]
             }
           }
         })
