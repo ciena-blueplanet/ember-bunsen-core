@@ -1,3 +1,8 @@
+# 0.24.3 (2017-05-05)
+
+* **Fixed** publish to be based on `6.9.1` node and not `stable` (which has moved to `7.10.0`)
+
+
 # 0.24.2 (2017-05-04)
 
 * **Fixed** publish to be based on `6.9.1` node and not `stable` (which has moved to `7.10.0`)
