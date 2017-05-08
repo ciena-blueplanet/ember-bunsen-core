@@ -1,3 +1,6 @@
+# 0.26.0 (2017-05-08)
+**Updated** bunsen-core version to support conditional properties in arrays.
+
 # 0.25.0 (2017-05-04)
 **Updated** `bunsen-core` dependency to 0.28.0
 
