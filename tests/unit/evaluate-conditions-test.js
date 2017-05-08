@@ -232,7 +232,7 @@ describe('evaluate-conditions', () => {
         newModel = dereferenceAndEval(model, value)
       })
 
-      it('evaluates to anyOf the possible items', () => {
+      it('evaluates to array of the possible items', () => {
         expect(newModel).to.eql({
           type: 'object',
           properties: {
@@ -275,7 +275,16 @@ describe('evaluate-conditions', () => {
                     maximum: 4094
                   }
                 }
-              }]
+              }],
+              additionalItems: {
+                type: 'object',
+                properties: {
+                  tagType: {
+                    type: 'string',
+                    enum: ['untagged', 'single-tagged', 'double-tagged']
+                  }
+                }
+              }
             }
           }
         })
