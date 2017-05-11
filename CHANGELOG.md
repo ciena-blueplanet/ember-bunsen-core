@@ -1,3 +1,8 @@
+# 0.27.0 (2017-05-11)
+
+* **Updated** secure auth token.
+* **Updated** `bunsen-core` to latest version.
+
 # 0.26.0 (2017-05-08)
 **Updated** bunsen-core version to support conditional properties in arrays.
 
