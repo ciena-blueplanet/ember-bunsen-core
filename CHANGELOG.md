@@ -1,3 +1,7 @@
+# 0.27.1 (2017-05-12)
+
+* **Upgraded** to latest version of `bunsen-core`.
+
 # 0.27.0 (2017-05-11)
 
 * **Updated** secure auth token.
