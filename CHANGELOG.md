@@ -1,3 +1,6 @@
+# 0.27.2 (2017-05-16)
+**Updated** core version.
+
 # 0.27.1 (2017-05-12)
 
 * **Upgraded** to latest version of `bunsen-core`.
