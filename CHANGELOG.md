@@ -1,3 +1,6 @@
+# 0.27.3 (2017-05-23)
+**Update** bunsen-core with a fix for conditions referencing internal models. 
+
 # 0.27.2 (2017-05-16)
 **Updated** core version.
 
