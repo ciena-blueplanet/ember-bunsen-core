@@ -1,3 +1,8 @@
+# 0.27.4 (2017-05-24)
+
+**Updated** bunsen-core for export of ValueWrapper.
+
+
 # 0.27.3 (2017-05-23)
 **Update** bunsen-core with a fix for conditions referencing internal models. 
 
