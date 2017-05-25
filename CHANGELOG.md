@@ -1,3 +1,7 @@
+# 0.27.5 (2017-05-25)
+
+**Fixed** handling of empty array values in view condition evaluation.
+
 # 0.27.4 (2017-05-24)
 
 **Updated** bunsen-core for export of ValueWrapper.
