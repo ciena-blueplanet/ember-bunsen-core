@@ -1,3 +1,6 @@
+# 0.27.6 (2017-05-31)
+**Fixed** model evaluation for empty array values.
+
 # 0.27.5 (2017-05-25)
 
 **Fixed** handling of empty array values in view condition evaluation.
