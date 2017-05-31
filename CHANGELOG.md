@@ -1,3 +1,6 @@
+# 0.27.7 (2017-05-31)
+**Fixed** internal model references in nested cell configs.
+
 # 0.27.6 (2017-05-31)
 **Fixed** model evaluation for empty array values.
 
