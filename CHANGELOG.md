@@ -1,3 +1,7 @@
+# 0.27.8 (2017-06-04)
+
+**Fix** relative pathing
+
 # 0.27.7 (2017-05-31)
 **Fixed** internal model references in nested cell configs.
 
