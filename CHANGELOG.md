@@ -1,3 +1,6 @@
+# 0.27.9 (2017-06-08)
+**Update** core with fixes for array cases of internal properties.
+
 # 0.27.8 (2017-06-04)
 
 **Fix** relative pathing
