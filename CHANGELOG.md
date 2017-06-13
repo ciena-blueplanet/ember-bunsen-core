@@ -1,3 +1,6 @@
+# 0.27.10 (2017-06-13)
+Incorrect views no longer cause normalization to crash. Instead, model and view are returned unchanged.
+
 # 0.27.9 (2017-06-08)
 **Update** core with fixes for array cases of internal properties.
 
