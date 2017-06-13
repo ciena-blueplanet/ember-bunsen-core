@@ -61,7 +61,7 @@
   ],
   "dependencies": {
     "broccoli-merge-trees": "^1.0.0",
-    "bunsen-core": "0.30.9",
+    "bunsen-core": "0.30.10",
     "ember-cli-babel": "^5.1.6",
     "ember-cli-moment-shim": "^2.0.0",
     "ember-lodash-shim": "^2.0.0",
