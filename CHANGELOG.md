@@ -1,3 +1,6 @@
+# 0.27.12 (2017-06-16)
+**Fixed** how BunsenModelPath handles appending string paths using dot notation. This was causing internal models to be added to the wrong spot in the bunsen model if the cell defining the internal model used dot notation.
+
 # 0.27.11 (2017-06-14)
 Additional fixes to the internal model feature.
 
