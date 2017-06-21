@@ -1,3 +1,7 @@
+# 0.27.14 (2017-06-21)
+**Fixed** check for `_internal` properties in validation that is no longer needed.
+
+
 # 0.27.13 (2017-06-20)
 
 * **Updated** to use [bunsen-core@0.30.13](https://github.com/ciena-blueplanet/bunsen-core/pull/112)
