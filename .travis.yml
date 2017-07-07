@@ -22,10 +22,8 @@ cache:
 
 env:
   matrix:
-  - EMBER_TRY_SCENARIO=ember-1-12
   - EMBER_TRY_SCENARIO=ember-2-8
   - EMBER_TRY_SCENARIO=default
-  - EMBER_TRY_SCENARIO=ember-release
   global:
     - CXX=g++-4.8
     - secure: i/krpp2GOasxCR9fzGEk7tIiyXns1NqGB0LMXc1xfviX5XDO9VPvxlUitUSHnuXTbVCC95RvmLy5H33NCgCOEYChULIK2AUjI1nVQc1U4h1RBNWqO3fQ8pjwdLnOK5FqJZaHII+OSULLWu5sRs2b0ZgIlvRFHbTpSYCkb8GGmAiPlERocV/UQEPJr+h+VAHlqg0U0Xi0c2hv8PQC5te94mU7chlBIG9fcoM8cddjYZ/LaHqNW2vYOztUTz7sOj9C2zwWjoKoEalrD6c22NyJSLfP7oF6DjZuuiiFQkcLm7AoMHM149OjUP0t2KnESA5CsUJXUct3iAqoX8H3qHrnEoR5mi4t15SIT8NndtHd1N0aqss6J3o+n2y91wHAfO1ukvke1gnVhczRzMpCQZURdt0RfEGsq3oSuxUuYDdEAXh5DHDH4YcPoTFG6mjGUr6BSv9yEFijE67pXtxIQepeH70O6VEz8E6dtWaYEkPvqX8o0duoneJ+bHTcRaETDesR6nHxE1upl17xC/7zN6n0A1NitS5gVwFCc7HdbimB+tRyfdfWGewDcMXiOU+ta67HmqXxqk9aFIDvf5pF7nLdXAgta227kgudfw9wKDD6qEB06nmdO84j7AIbHAzzWXjLkyurqj+nPBLuecUFWNoKncYAofJSqsqHt9Dd13uSm/0=
@@ -37,7 +35,7 @@ matrix:
 
 before_install:
 - npm config set spin false
-- npm install -g coveralls pr-bumper
+- npm install -g coveralls pr-bumper@^1.0.0
 - $(npm root -g)/pr-bumper/.travis/maybe-check-scope.sh
 
 install:
