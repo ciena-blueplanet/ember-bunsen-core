@@ -1,3 +1,8 @@
+# 1.0.1 (2017-07-07)
+
+* **Fixes** the build. Manually bumped the version to reflect the version it was supposed to be it.
+
+
 # 0.27.14 (2017-06-21)
 **Fixed** check for `_internal` properties in validation that is no longer needed.
 
