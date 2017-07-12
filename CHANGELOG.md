@@ -1,3 +1,9 @@
+# 1.0.2 (2017-07-12)
+* **Added** CONTRIBUTING.md
+* **Updated** to Ember CLI 2.12.3 and Ember 2.12.x
+* **Updated** ember-try config matrix with Ember LTS 2.8 and LTS 2.12
+* **Updated** travis.yml build matrix to run Ember LTS 2.8 and default (Ember LTS 2.12)
+
 # 1.0.1 (2017-07-07)
 
 * **Fixes** the build. Manually bumped the version to reflect the version it was supposed to be it.
