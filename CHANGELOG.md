@@ -1,3 +1,8 @@
+# 1.0.3 (2017-07-19)
+
+Stops pinning the dependencies. If it is required to pin a specific dependency of `bunsen-core`, that's still possible in the app. This addon will now just follow the most recent version of `bunsen-core@1.x.x`.
+
+
 # 1.0.2 (2017-07-12)
 * **Added** CONTRIBUTING.md
 * **Updated** to Ember CLI 2.12.3 and Ember 2.12.x
