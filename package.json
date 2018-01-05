@@ -48,7 +48,6 @@
     "eslint-config-frost-standard": "^5.0.0",
     "eslint-plugin-mocha": "^4.3.0",
     "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.0",
     "loader.js": "^4.2.3"
   },
   "keywords": [
