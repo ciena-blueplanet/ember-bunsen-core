@@ -1,3 +1,20 @@
+# 3.0.0 (2018-01-08)
+* **Added** `bower` devDependency @ `^1.8.2`
+* **Added** `ember-frost-test` @ `^4.0.0`
+* **Added** `chai-jquery` @ `^2.0.0`
+* **Updated** `ember-cli-chai` to `0.4.3`
+* **Updated** to pin `ember-cli-htmlbars-inline-precompile` @ `0.3.12`
+* **Updated** `ember-cli-mocha` to `0.14.4`
+* **Added** `ember-hook` @ `1.4.2`
+* **Added** `ember-sinon` @ `^0.7.0`
+* **Updated** `ember-test-utils` to `^8.1.0`
+* **Added** `sinon-chai` @ `^2.14.0`
+* **Added** ignoring of `package-lock` until we are ready to move to node 8
+* **Added** ignoring of linting the CHANGELOG.md file
+* **Added** `NOTES.md` file to explain reasons that some of the dependencies exist
+* **Removed** useLintTree ember-cli-mocha configuration from `ember-cli-build.js`
+* **Updated** `npm run test` to not run code coverage (since it is not currently installed)
+
 # 2.0.0 (2017-09-18)
 
 * **Upgraded** bunsen-core to latest (2.0.0)
