@@ -23,7 +23,7 @@ function compare (expected, actual) {
     if (typeof (actual.length) !== 'number') {
       return false
     }
-    var aa = Array.prototype.slice.call(actual)
+    const aa = Array.prototype.slice.call(actual)
     return expected.every(function (exp) {
       return aa.some(function (act) {
         return compare(exp, act)
@@ -36,8 +36,8 @@ function compare (expected, actual) {
   }
 
   return Object.keys(expected).every(function (key) {
-    var eo = expected[key]
-    var ao = actual[key]
+    const eo = expected[key]
+    const ao = actual[key]
     if (typeof (eo) === 'object' && eo !== null && ao !== null) {
       return compare(eo, ao)
     }
@@ -48,8 +48,8 @@ function compare (expected, actual) {
 
 // Taken from chai-subset
 chai.Assertion.addMethod('containSubset', function (expected) {
-  var actual = flag(this, 'object')
-  var showDiff = chai.config.showDiff
+  const actual = flag(this, 'object')
+  const showDiff = chai.config.showDiff
 
   this.assert(
     compare(expected, actual),
