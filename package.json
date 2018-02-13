@@ -57,7 +57,7 @@
     "broccoli-merge-trees": "^2.0.0",
     "bunsen-core": "^2.0.7",
     "ember-cli-babel": "^5.1.7",
-    "ember-cli-moment-shim": "^3.0.1",
+    "ember-cli-moment-shim": "3.3.3",
     "ember-lodash-shim": "^2.0.7",
     "ember-seamless-immutable-shim": "^3.0.0",
     "ember-validator-shim": "^3.0.0",
