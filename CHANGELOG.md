@@ -1,3 +1,6 @@
+# 4.0.0 (2018-02-13)
+* **Updated** `ember-cli-moment-shim` to `3.3.3`
+
 # 3.0.0 (2018-01-08)
 * **Added** `bower` devDependency @ `^1.8.2`
 * **Added** `ember-frost-test` @ `^4.0.0`
