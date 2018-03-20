@@ -1,3 +1,7 @@
+# 4.0.1 (2018-03-20)
+
+* Test change
+
 # 4.0.0 (2018-02-13)
 * **Updated** `ember-cli-moment-shim` to `3.3.3`
 
