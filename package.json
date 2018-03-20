@@ -59,7 +59,7 @@
     "ember-cli-babel": "^5.1.7",
     "ember-cli-moment-shim": "3.3.3",
     "ember-lodash-shim": "^3.0.1",
-    "ember-seamless-immutable-shim": "^3.0.0",
+    "ember-seamless-immutable-shim": "^3.0.1",
     "ember-validator-shim": "^3.0.0",
     "ember-z-schema": "^3.0.0"
   },
