@@ -60,7 +60,7 @@
     "ember-cli-moment-shim": "3.3.3",
     "ember-lodash-shim": "^3.0.1",
     "ember-seamless-immutable-shim": "^3.0.1",
-    "ember-validator-shim": "^3.0.0",
+    "ember-validator-shim": "^3.0.1",
     "ember-z-schema": "^3.0.0"
   },
   "ember-addon": {
