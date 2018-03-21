@@ -1,3 +1,19 @@
+# 5.0.0 (2018-03-20)
+* Updated pull request template
+* Added issue template
+* Updated to pr-bumper version 3
+* Updated to node 8
+* Added slack integration
+* Updated ember-frost-test to ^4.0.1
+* Updated ember-test-utils to ^8.1.1
+* Updated ember-lodash-shim to ^3.0.1
+* Updated ember-seamless-immutable-shim to ^3.0.1
+* Updated ember-validator-shim to ^3.0.1
+* Updated ember-z-schema to ^4.0.0
+* Removed ignoring of package-lock.json file
+* Added package-lock.json file
+* Updated Travis CI scripts to allow non-exact node version
+
 # 4.0.0 (2018-02-13)
 * **Updated** `ember-cli-moment-shim` to `3.3.3`
 
@@ -80,7 +96,7 @@ Incorrect views no longer cause normalization to crash. Instead, model and view 
 
 
 # 0.27.3 (2017-05-23)
-**Update** bunsen-core with a fix for conditions referencing internal models. 
+**Update** bunsen-core with a fix for conditions referencing internal models.
 
 # 0.27.2 (2017-05-16)
 **Updated** core version.
