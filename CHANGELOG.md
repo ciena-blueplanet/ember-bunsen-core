@@ -1,3 +1,8 @@
+# 5.0.1 (2018-07-20)
+
+* **Fixed** Travis API key.
+
+
 # 5.0.0 (2018-03-20)
 * Updated pull request template
 * Added issue template
