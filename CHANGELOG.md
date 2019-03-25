@@ -1,3 +1,7 @@
+# 7.0.0 (2019-03-25)
+
+* Update bunsen-core
+
 # 6.0.0 (2018-10-17)
 
 * Upgrade ember-cli-babel to 6.6.0
