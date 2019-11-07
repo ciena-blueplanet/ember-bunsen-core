@@ -1,3 +1,7 @@
+# 7.0.1 (2019-11-07)
+Upversion bunsen-core to v3.1.0
+
+
 # 7.0.0 (2019-03-25)
 
 * Update bunsen-core
