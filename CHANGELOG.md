@@ -1,3 +1,6 @@
+# 7.0.2 (2021-03-19)
+* Update `ember-cli-shim` to `3.8.0` to fix [double minify issue](https://github.com/terser/terser/issues/684#ref-issue-613919275) that breaks deploy
+
 # 7.0.1 (2019-11-07)
 Upversion bunsen-core to v3.1.0
 
