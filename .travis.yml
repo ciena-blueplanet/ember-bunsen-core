@@ -4,13 +4,7 @@ language: node_js
 node_js:
 - 8.6.0
 addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    - google-chrome
-    packages:
-    - google-chrome-stable
-    - g++-4.8
+  chrome: stable
   firefox: latest
 cache:
   directories:
